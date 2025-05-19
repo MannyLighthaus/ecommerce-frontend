@@ -2,8 +2,9 @@
 import { onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useProductStore } from '../stores/product'
-import { BContainer, BRow, BCol, BCard, BCardImg, BCardTitle, BCardText } from 'bootstrap-vue-next'
+import { BContainer, BRow, BCol } from 'bootstrap-vue-next'
 import HeroBanner from '@/components/HeroBanner.vue'
+import ProductList from '@/components/ProductList.vue'
 
 // Use Pinia store
 const store = useProductStore()
@@ -46,35 +47,7 @@ onMounted(() => {
   </section>
 
   <!-- Product listings -->
-  <section>
-    <BContainer class="">
-      <BRow class="text-center mt-5 mb-2">
-        <BCol>
-          <h2>Our Products</h2>
-        </BCol>
-      </BRow>
-
-      <!-- Loading state -->
-      <div v-if="loading" class="text-center">
-        <p>Loading products...</p>
-      </div>
-
-      <!-- Products -->
-      <BRow v-else-if="products.length">
-        <BCol md="4" v-for="product in products" :key="product.id" class="mb-4 text-center">
-          <BCard class="h-100">
-            <BCardImg :src="product.image" alt="Product" class="product-image" />
-            <BCardTitle class="truncate-title"> {{ product.title }}</BCardTitle>
-            <BCardText>₦ {{ product.price }}</BCardText>
-          </BCard>
-        </BCol>
-      </BRow>
-      <!-- No products -->
-      <div v-else class="text-center">
-        <p>No products available.</p>
-      </div>
-    </BContainer>
-  </section>
+  <ProductList />
 </template>
 
 <style scoped>
