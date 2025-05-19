@@ -20,14 +20,7 @@ import { BCard, BCardText, BButton } from 'bootstrap-vue-next'
       </BCardText>
 
       <!-- button -->
-
       <BButton tag="router-link" to="/Shop" class="button"> Buy Now </BButton>
-
-      <!-- <div>
-        <router-link to="./shop">
-          <BButton class="button">Buy Now</BButton>
-        </router-link>
-      </div> -->
     </BCard>
   </section>
 </template>
