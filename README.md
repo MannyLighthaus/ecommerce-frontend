@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ecommerce-frontend
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -33,3 +34,6 @@ npm run build
 ```sh
 npm run lint
 ```
+=======
+# Ecommerce-frontend
+>>>>>>> f906955b7560a6054a4c15a2e1c217c462da646a
