@@ -10,7 +10,7 @@ import {
 </script>
 
 <template>
-  <BNavbar toggleable="md" class="app-nav-bar">
+  <BNavbar toggleable="md" class="app-nav-bar px-3">
     <BNavbarToggle target="nav-collapse" />
     <!-- logo/brand -->
     <BNavbarBrand>
@@ -21,8 +21,8 @@ import {
     </BNavbarBrand>
 
     <!-- nav-links -->
-    <BCollapse id="nav-collapse" is-nav>
-      <BNavbarNav>
+    <BCollapse id="nav-collapse" is-nav class="mobile-overlay-collapse">
+      <BNavbarNav class="justify-content-center w-100">
         <BNavItem>
           <router-link to="/" class="nav-link">Home</router-link>
         </BNavItem>
@@ -47,18 +47,21 @@ import {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  gap: 2px;
+  gap: 6px;
 }
 
+/* hamburger and brandname/logo side by side s */
 .app-nav-bar {
   .container-fluid {
     justify-content: flex-start;
     gap: 10px;
   }
 }
-#nav-collapse {
-  .navbar-nav {
-    padding: 20px;
-  }
+
+.nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+  line-height: 100%;
 }
 </style>
