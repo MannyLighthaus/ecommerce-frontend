@@ -110,7 +110,7 @@ const { products, loading } = storeToRefs(store)
     font-size: 40px;
   }
   .btn-icon-container {
-    display: none;
-  }
+  display: none;
+
 }
 </style>

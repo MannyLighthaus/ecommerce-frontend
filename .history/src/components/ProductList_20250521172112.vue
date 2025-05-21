@@ -43,7 +43,7 @@ const { products, loading } = storeToRefs(store)
               <BButton class="button">Add to cart</BButton>
               <!-- icons -->
               <div class="nav-icons">
-                <i class="bi bi-arrow-left-right"></i>
+                <i class="bi bi-person-exclamation"></i>
                 <i class="bi bi-share"></i>
                 <i class="bi bi-heart"></i>
               </div>
@@ -108,9 +108,6 @@ const { products, loading } = storeToRefs(store)
 @media (min-width: 768px) {
   .product-header-text {
     font-size: 40px;
-  }
-  .btn-icon-container {
-    display: none;
   }
 }
 </style>

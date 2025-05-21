@@ -5,7 +5,7 @@ import { useProductStore } from '../stores/product'
 import { BContainer, BRow, BCol } from 'bootstrap-vue-next'
 import HeroBanner from '@/components/HeroBanner.vue'
 import ProductList from '@/components/ProductList.vue'
-import FooterSection from '@/components/FooterSection.vue'
+import Footer from '@/components/Footer.vue'
 
 // Use Pinia store
 const store = useProductStore()
@@ -49,9 +49,6 @@ onMounted(() => {
 
   <!-- Product listings -->
   <ProductList />
-
-  <!-- footer -->
-  <FooterSection />
 </template>
 
 <style scoped>

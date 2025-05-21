@@ -39,15 +39,7 @@ const { products, loading } = storeToRefs(store)
             <BCardImg :src="product.image" alt="Product" class="product-image" />
             <BCardTitle class="truncate-title"> {{ product.title }}</BCardTitle>
             <BCardText>₦ {{ product.price }}</BCardText>
-            <div class="btn-icon-container">
-              <BButton class="button">Add to cart</BButton>
-              <!-- icons -->
-              <div class="nav-icons">
-                <i class="bi bi-arrow-left-right"></i>
-                <i class="bi bi-share"></i>
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
+            <BButton class="button">Add to cart</BButton>
           </BCard>
         </BCol>
       </BRow>
@@ -91,26 +83,10 @@ const { products, loading } = storeToRefs(store)
   width: 140px;
   height: 45px;
 }
-.nav-icons {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-.nav-icons i {
-  font-size: 22px;
-  color: black;
-}
-.btn-icon-container {
-  display: flex;
-  justify-content: space-between;
-}
 
 @media (min-width: 768px) {
   .product-header-text {
     font-size: 40px;
-  }
-  .btn-icon-container {
-    display: none;
   }
 }
 </style>

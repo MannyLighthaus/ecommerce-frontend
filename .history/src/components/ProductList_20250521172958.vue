@@ -109,8 +109,8 @@ const { products, loading } = storeToRefs(store)
   .product-header-text {
     font-size: 40px;
   }
-  .btn-icon-container {
+  /* .btn-icon-container {
     display: none;
-  }
+  } */
 }
 </style>
