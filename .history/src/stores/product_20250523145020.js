@@ -10,7 +10,6 @@ export const useProductStore = defineStore('product', () => {
 
   //single product
   const product = ref(null)
-
   // Track loading state (true when fetching, false when done)
   const loading = ref(false)
 

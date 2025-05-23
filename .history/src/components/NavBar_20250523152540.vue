@@ -10,7 +10,7 @@ import {
 </script>
 
 <template>
-  <BNavbar toggleable="md p-0 my-3" class="app-nav-bar">
+  <BNavbar toggleable="md p-0 mt-2" class="app-nav-bar">
     <div class="toggle-brand-container">
       <BNavbarToggle target="nav-collapse" />
       <!-- logo/brand -->

@@ -58,8 +58,5 @@ defineProps({
   .card-img {
     max-height: 450px;
   }
-  .card-container {
-    border: none;
-  }
 }
 </style>

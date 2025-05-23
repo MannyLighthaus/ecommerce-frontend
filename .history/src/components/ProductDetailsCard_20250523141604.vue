@@ -18,7 +18,7 @@ defineProps({
       </div>
     </BCol>
     <BCol md="6">
-      <BCard class="card-container">
+      <BCard class="border-0">
         <BCardTitle>{{ product.title }}</BCardTitle>
         <BCardText>
           <p><strong>Price:</strong> ₦ {{ product.price }}</p>
@@ -57,9 +57,6 @@ defineProps({
 @media (min-width: 768px) {
   .card-img {
     max-height: 450px;
-  }
-  .card-container {
-    border: none;
   }
 }
 </style>

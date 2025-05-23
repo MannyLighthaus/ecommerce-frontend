@@ -16,9 +16,9 @@ onMounted(() => {
   store.fetchProductById(route.params.id)
 })
 
-// function goToShop() {
-//   router.push({ name: 'shop' })
-// }
+function goToShop() {
+  router.push({ name: 'shop' })
+}
 </script>
 
 <template>
@@ -40,7 +40,6 @@ onMounted(() => {
       <p>Product not found.</p>
     </div>
     <hr />
-    <FooterSection />
   </BContainer>
 </template>
 

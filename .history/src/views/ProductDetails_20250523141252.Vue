@@ -5,7 +5,6 @@ import { useProductStore } from '../stores/product'
 import { storeToRefs } from 'pinia'
 import { BContainer, BBreadcrumb, BBreadcrumbItem } from 'bootstrap-vue-next'
 import ProductDetailsCard from '../components/ProductDetailsCard.vue'
-import FooterSection from '@/components/FooterSection.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -16,9 +15,9 @@ onMounted(() => {
   store.fetchProductById(route.params.id)
 })
 
-// function goToShop() {
-//   router.push({ name: 'shop' })
-// }
+function goToShop() {
+  router.push({ name: 'shop' })
+}
 </script>
 
 <template>
@@ -40,7 +39,6 @@ onMounted(() => {
       <p>Product not found.</p>
     </div>
     <hr />
-    <FooterSection />
   </BContainer>
 </template>
 
