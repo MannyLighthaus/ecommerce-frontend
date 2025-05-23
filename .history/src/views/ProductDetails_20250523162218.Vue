@@ -116,10 +116,6 @@ onMounted(() => {
   }
   .breadcrumb-item.active {
     font-size: 16px;
-    white-space: normal;
-    overflow: visible;
-    text-overflow: unset;
-    max-width: 100%;
   }
   /* the divider */
   .breadcrumb-item + .breadcrumb-item::before {

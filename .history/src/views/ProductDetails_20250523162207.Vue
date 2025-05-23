@@ -70,10 +70,6 @@ onMounted(() => {
   font-size: 14px;
   font-weight: 300;
   color: rgba(0, 0, 0, 1);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 200px;
 }
 
 /* the divider */
@@ -116,10 +112,6 @@ onMounted(() => {
   }
   .breadcrumb-item.active {
     font-size: 16px;
-    white-space: normal;
-    overflow: visible;
-    text-overflow: unset;
-    max-width: 100%;
   }
   /* the divider */
   .breadcrumb-item + .breadcrumb-item::before {
