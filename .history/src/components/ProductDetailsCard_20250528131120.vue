@@ -94,7 +94,7 @@ function decreaseQuantity() {
   align-items: center;
   margin: 0;
   border: 1px solid black;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 5px 10px;
   width: fit-content;
 }
