@@ -17,9 +17,7 @@ function increaseQuantity() {
 }
 
 function decreaseQuantity() {
-  if (quantity.value > 1) {
-    quantity.value--
-  }
+  quantity.value--
 }
 </script>
 
@@ -45,7 +43,7 @@ function decreaseQuantity() {
           <div class="btns-container">
             <div class="qty-selector">
               <button class="qty-btn" @click="decreaseQuantity">-</button>
-              <span class="qty-value">{{ quantity }}</span>
+              <span class="qty-value">10{{ quantity }}</span>
               <button class="qty-btn" @click="increaseQuantity">+</button>
             </div>
             <BButton class="button">Add to cart</BButton>

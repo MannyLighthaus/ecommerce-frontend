@@ -16,11 +16,7 @@ function increaseQuantity() {
   quantity.value++
 }
 
-function decreaseQuantity() {
-  if (quantity.value > 1) {
-    quantity.value--
-  }
-}
+function decreaseQuantity() {}
 </script>
 
 <template>

@@ -19,7 +19,7 @@ function increaseQuantity() {
 function decreaseQuantity() {
   if (quantity.value > 1) {
     quantity.value--
-  }
+  })
 }
 </script>
 

@@ -39,11 +39,11 @@ const router = createRouter({
       path: '/cart',
       name: 'cart',
 
-      component: () => import('../views/CartView.vue'),
+      component: () => import('../views/ProductDetails.vue'),
     },
   ],
 
-  // Add this to scroll to top on every route change
+  // 👇 Add this to scroll to top on every route change
   scrollBehavior(to, from, savedPosition) {
     return { top: 0, behaviour: 'smooth' }
   },

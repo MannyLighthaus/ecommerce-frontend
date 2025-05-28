@@ -1,6 +1,6 @@
 <script setup>
 import { BCard, BCardImg, BCardTitle, BCardText, BButton, BCol, BRow } from 'bootstrap-vue-next'
-import { ref } from 'vue'
+
 // get the product from the parent (productdetails)
 defineProps({
   product: {
@@ -8,19 +8,6 @@ defineProps({
     required: true,
   },
 })
-
-//qty logic
-const quantity = ref(1)
-
-function increaseQuantity() {
-  quantity.value++
-}
-
-function decreaseQuantity() {
-  if (quantity.value > 1) {
-    quantity.value--
-  }
-}
 </script>
 
 <template>
@@ -45,9 +32,10 @@ function decreaseQuantity() {
           <div class="btns-container">
             <div class="qty-selector">
               <button class="qty-btn" @click="decreaseQuantity">-</button>
-              <span class="qty-value">{{ quantity }}</span>
+              <span class="qty-value">10{{ quantity }}</span>
               <button class="qty-btn" @click="increaseQuantity">+</button>
             </div>
+
             <BButton class="button">Add to cart</BButton>
           </div>
         </BCard>
@@ -67,12 +55,14 @@ function decreaseQuantity() {
 }
 
 .product-details-card .button {
-  color: black;
-  background-color: white;
-  font-size: 20px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(184, 142, 47, 1);
+  font-size: 14px;
   cursor: pointer;
   border-color: none;
   border-radius: 5px;
+  width: 140px;
+  height: 45px;
 }
 /* .image-container {
   background-color: #f9f1e7;
@@ -86,40 +76,28 @@ function decreaseQuantity() {
 
 .product-details-card .btns-container {
   display: flex;
+  flex-direction: column;
   gap: 10px;
+  width: 140px;
+  height: 45px;
 }
 .product-details-card .qty-selector {
   display: flex;
   gap: 10px;
   align-items: center;
-  margin: 0;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 5px 10px;
-  width: fit-content;
-}
-.product-details-card .qty-selector .qty-btn {
-  border: none;
-  background: none;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 5px 10px;
-}
-.product-details-card .qty-selector .qty-value {
-  font-weight: bold;
-  text-align: center;
+  margin-block: 20px;
 }
 
 @media (min-width: 768px) {
   .product-details-card .card-img {
     max-height: 450px;
   }
-  /* .product-details-card .card-container {
+  .product-details-card .card-container {
     border: none;
   }
   .product-details-card .btns-container {
     display: flex;
     gap: 10px;
-  } */
+  }
 }
 </style>

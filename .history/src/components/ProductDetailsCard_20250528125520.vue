@@ -1,6 +1,6 @@
 <script setup>
 import { BCard, BCardImg, BCardTitle, BCardText, BButton, BCol, BRow } from 'bootstrap-vue-next'
-import { ref } from 'vue'
+
 // get the product from the parent (productdetails)
 defineProps({
   product: {
@@ -8,19 +8,6 @@ defineProps({
     required: true,
   },
 })
-
-//qty logic
-const quantity = ref(1)
-
-function increaseQuantity() {
-  quantity.value++
-}
-
-function decreaseQuantity() {
-  if (quantity.value > 1) {
-    quantity.value--
-  }
-}
 </script>
 
 <template>
@@ -45,7 +32,7 @@ function decreaseQuantity() {
           <div class="btns-container">
             <div class="qty-selector">
               <button class="qty-btn" @click="decreaseQuantity">-</button>
-              <span class="qty-value">{{ quantity }}</span>
+              <span class="qty-value">10{{ quantity }}</span>
               <button class="qty-btn" @click="increaseQuantity">+</button>
             </div>
             <BButton class="button">Add to cart</BButton>
@@ -68,11 +55,12 @@ function decreaseQuantity() {
 
 .product-details-card .button {
   color: black;
-  background-color: white;
+  background-color: rgba(184, 142, 47, 1);
   font-size: 20px;
   cursor: pointer;
   border-color: none;
   border-radius: 5px;
+  font-weight: bold;
 }
 /* .image-container {
   background-color: #f9f1e7;
@@ -86,7 +74,7 @@ function decreaseQuantity() {
 
 .product-details-card .btns-container {
   display: flex;
-  gap: 10px;
+  gap: 1px;
 }
 .product-details-card .qty-selector {
   display: flex;
