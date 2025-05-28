@@ -8,14 +8,9 @@ import {
   BNavItem,
 } from 'bootstrap-vue-next'
 
-import { computed } from 'vue'
 import { useCartStore } from '@/stores/CartStore'
 
-// access the store to get cart data(total items count)
 const cartStore = useCartStore()
-
-//computed property to get the no. of items in the cart
-const cartCount = computed(() => cartStore.cartItems.length)
 </script>
 
 <template>
@@ -35,11 +30,7 @@ const cartCount = computed(() => cartStore.cartItems.length)
     <div class="nav-icons">
       <i class="bi bi-person-exclamation"></i>
       <i class="bi bi-search"></i>
-      <div class="cart-icon-wrapper">
-        <i class="bi bi-cart"></i>
-        <!-- only show if greater than 0 -->
-        <span class="cart-count-badge" v-if="cartCount > 0">{{ cartCount }}</span>
-      </div>
+      <i class="bi bi-cart"></i>
     </div>
 
     <!-- nav-links -->
@@ -65,10 +56,7 @@ const cartCount = computed(() => cartStore.cartItems.length)
       <i class="bi bi-person-exclamation"></i>
       <i class="bi bi-search"></i>
       <i class="bi bi-heart"></i>
-      <div class="cart-icon-wrapper">
-        <i class="bi bi-cart"></i>
-        <span class="cart-count-badge" v-if="cartCount > 0">{{ cartCount }}</span>
-      </div>
+      <i class="bi bi-cart"></i>
     </div>
   </BNavbar>
 </template>
@@ -116,26 +104,6 @@ const cartCount = computed(() => cartStore.cartItems.length)
   font-weight: 500;
 }
 
-.cart-icon-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.cart-count-badge {
-  position: absolute;
-  top: -2px;
-  right: -8px;
-  background-color: black;
-  color: white;
-  border-radius: 50%;
-  font-size: 14px;
-  width: 16px;
-  height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
 /* larger screen size */
 
 @media (min-width: 768px) {

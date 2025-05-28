@@ -31,13 +31,12 @@ export const useCartStore = defineStore('cart', {
   // ACTIONS: methods to change the state
   actions: {
     // Add item to cart or increase quantity if already exists
-    addToCart(product) {
-      console.log('Store addToCart:', product)
+    addToCart(product, quantity = 1) {
       const existing = this.cartItems.find((item) => item.id === product.id)
       if (existing) {
-        existing.quantity += 1
+        existing.quantity += quantity
       } else {
-        this.cartItems.push({ ...product, quantity: 1 })
+        this.cartItems.push({ ...product, quantity })
       }
     },
 
@@ -49,20 +48,6 @@ export const useCartStore = defineStore('cart', {
     // Clear entire cart
     clearCart() {
       this.cartItems = []
-    },
-
-    increaseQuantity(id) {
-      const item = this.cartItems.find((item) => item.id === id)
-      if (item) {
-        item.quantity += 1
-      }
-    },
-
-    decreaseQuantity(id) {
-      const item = this.cartItems.find((item) => item.id === id)
-      if (item && item.quantity > 1) {
-        item.quantity -= 1
-      }
     },
   },
 })

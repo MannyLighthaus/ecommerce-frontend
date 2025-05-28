@@ -11,11 +11,8 @@ import {
 import { computed } from 'vue'
 import { useCartStore } from '@/stores/CartStore'
 
-// access the store to get cart data(total items count)
 const cartStore = useCartStore()
-
-//computed property to get the no. of items in the cart
-const cartCount = computed(() => cartStore.cartItems.length)
+const cartCount = computed(() => cartStore.cart.length)
 </script>
 
 <template>
@@ -37,8 +34,7 @@ const cartCount = computed(() => cartStore.cartItems.length)
       <i class="bi bi-search"></i>
       <div class="cart-icon-wrapper">
         <i class="bi bi-cart"></i>
-        <!-- only show if greater than 0 -->
-        <span class="cart-count-badge" v-if="cartCount > 0">{{ cartCount }}</span>
+        <span class="cart-count-badge" v-if="cartCount > 0"> 99{{ cartCount }}</span>
       </div>
     </div>
 
@@ -123,18 +119,20 @@ const cartCount = computed(() => cartStore.cartItems.length)
 
 .cart-count-badge {
   position: absolute;
-  top: -2px;
-  right: -8px;
-  background-color: black;
-  color: white;
+  top: 4px;
+  right: -2px;
+  background-color: red;
+  color: black;
   border-radius: 50%;
-  font-size: 14px;
-  width: 16px;
-  height: 16px;
+
+  font-size: 15px;
+  width: 18px;
+  height: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  line-height: 1;
 }
 /* larger screen size */
 

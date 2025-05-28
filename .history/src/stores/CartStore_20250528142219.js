@@ -32,7 +32,6 @@ export const useCartStore = defineStore('cart', {
   actions: {
     // Add item to cart or increase quantity if already exists
     addToCart(product) {
-      console.log('Store addToCart:', product)
       const existing = this.cartItems.find((item) => item.id === product.id)
       if (existing) {
         existing.quantity += 1
@@ -59,11 +58,10 @@ export const useCartStore = defineStore('cart', {
     },
 
     decreaseQuantity(id) {
-      const item = this.cartItems.find((item) => item.id === id)
+      const item = this.cartItems.find(item => item.id === id)
       if (item && item.quantity > 1) {
         item.quantity -= 1
       }
-    },
   },
 })
 

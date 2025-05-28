@@ -12,7 +12,7 @@ const props = defineProps({
 })
 
 //reactive state for the quantity starting at 1
-const quantity = ref(1)
+const quantity = ref(70)
 
 //access the cart store to interact with the cart state
 const cartStore = useCartStore()

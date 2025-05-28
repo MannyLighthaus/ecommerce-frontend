@@ -1,36 +1,22 @@
 <script setup>
 import { BCard, BCardImg, BCardTitle, BCardText, BButton, BCol, BRow } from 'bootstrap-vue-next'
 import { ref } from 'vue'
-import { useCartStore } from '@/stores/CartStore'
 
 // get the product from the parent (productdetails)
-const props = defineProps({
+defineProps({
   product: {
     type: Object,
     required: true,
   },
 })
 
-//reactive state for the quantity starting at 1
+//qty logic
 const quantity = ref(1)
 
-//access the cart store to interact with the cart state
-const cartStore = useCartStore()
-
-// called the method from the cart store when  "add to cart button" is clicked
-function addToCart() {
-  console.log('Adding to cart:', props.product.title, 'Quantity:', quantity.value)
-
-  // pass the entire product object and the selected quantity
-  cartStore.addToCart({ ...props.product, quantity: quantity.value })
-}
-
-// to increase the quantity in the selector
 function increaseQuantity() {
   quantity.value++
 }
 
-// to decrease the quantity in the selector(not below 1)
 function decreaseQuantity() {
   if (quantity.value > 1) {
     quantity.value--
@@ -63,7 +49,7 @@ function decreaseQuantity() {
               <span class="qty-value">{{ quantity }}</span>
               <button class="qty-btn" @click="increaseQuantity">+</button>
             </div>
-            <BButton class="button" @click="addToCart">Add to cart</BButton>
+            <BButton class="button">Add to cart</BButton>
           </div>
         </BCard>
       </BCol>

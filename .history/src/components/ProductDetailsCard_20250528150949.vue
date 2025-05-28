@@ -26,7 +26,7 @@ function addToCart() {
 }
 
 // to increase the quantity in the selector
-function increaseQuantity() {
+function increaseQuantity {
   quantity.value++
 }
 

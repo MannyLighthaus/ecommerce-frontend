@@ -37,7 +37,6 @@ const cartCount = computed(() => cartStore.cartItems.length)
       <i class="bi bi-search"></i>
       <div class="cart-icon-wrapper">
         <i class="bi bi-cart"></i>
-        <!-- only show if greater than 0 -->
         <span class="cart-count-badge" v-if="cartCount > 0">{{ cartCount }}</span>
       </div>
     </div>

@@ -17,7 +17,7 @@ const quantity = ref(1)
 //access the cart store to interact with the cart state
 const cartStore = useCartStore()
 
-// called the method from the cart store when  "add to cart button" is clicked
+// called when add to cart button is clicked
 function addToCart() {
   console.log('Adding to cart:', props.product.title, 'Quantity:', quantity.value)
 
