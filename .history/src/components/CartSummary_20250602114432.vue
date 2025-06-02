@@ -1,16 +1,10 @@
 <script setup>
 import { useCartStore } from '@/stores/CartStore'
 import { BButton } from 'bootstrap-vue-next'
-import { useRouter } from 'vue-router'
 const cart = useCartStore()
-const router = useRouter()
 
 function removeItem(id) {
   cart.removeFromCart(id)
-}
-
-function goToProduct(id) {
-  router.push(`/product/${id}`)
 }
 </script>
 
@@ -28,7 +22,7 @@ function goToProduct(id) {
 
       <!-- Left Side: Product Info -->
       <div class="cart-content">
-        <div class="image-price" @click="goToProduct(item.id)">
+        <div class="image-price">
           <img :src="item.image" alt="product" />
           <span>₦{{ item.price }}</span>
         </div>
@@ -64,12 +58,13 @@ function goToProduct(id) {
   </div>
 
   <!-- large screen -->
-
-  <div class="cart-header">
-    <p class="cart-header-text">Product</p>
-    <p class="cart-header-text">Price</p>
-    <p class="cart-header-text">Quantity</p>
-    <p class="cart-header-text">Suntotal</p>
+  <div class="cart-container-l">
+    <div class="cart-header">
+      <p class="cart-header-text">Product</p>
+      <p class="cart-header-text">Price</p>
+      <p class="cart-header-text">Quantity</p>
+      <p class="cart-header-text">Suntotal</p>
+    </div>
   </div>
 </template>
 
@@ -173,6 +168,9 @@ hr {
 @media (min-width: 768px) {
   .cart-container {
     display: none;
+  }
+  .cart-container-l {
+    display: flex;
   }
 }
 </style>

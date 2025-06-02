@@ -1,16 +1,10 @@
 <script setup>
 import { useCartStore } from '@/stores/CartStore'
 import { BButton } from 'bootstrap-vue-next'
-import { useRouter } from 'vue-router'
 const cart = useCartStore()
-const router = useRouter()
 
 function removeItem(id) {
   cart.removeFromCart(id)
-}
-
-function goToProduct(id) {
-  router.push(`/product/${id}`)
 }
 </script>
 
@@ -28,7 +22,7 @@ function goToProduct(id) {
 
       <!-- Left Side: Product Info -->
       <div class="cart-content">
-        <div class="image-price" @click="goToProduct(item.id)">
+        <div class="image-price">
           <img :src="item.image" alt="product" />
           <span>₦{{ item.price }}</span>
         </div>
@@ -43,8 +37,6 @@ function goToProduct(id) {
           ></i>
         </div>
       </div>
-      <!-- Show <hr> between items, but NOT after the last one -->
-      <hr v-if="index !== cart.cartItems.length - 1" />
     </div>
 
     <div class="total-card">
@@ -61,15 +53,6 @@ function goToProduct(id) {
       </div>
       <BButton class="checkout-btn">Check Out</BButton>
     </div>
-  </div>
-
-  <!-- large screen -->
-
-  <div class="cart-header">
-    <p class="cart-header-text">Product</p>
-    <p class="cart-header-text">Price</p>
-    <p class="cart-header-text">Quantity</p>
-    <p class="cart-header-text">Suntotal</p>
   </div>
 </template>
 
@@ -164,15 +147,7 @@ function goToProduct(id) {
   font-weight: 400;
   margin-top: 20px;
 }
-hr {
-  border: 0;
-  border-top: 1px solid black;
-  margin: 16px 0;
-}
 
 @media (min-width: 768px) {
-  .cart-container {
-    display: none;
-  }
 }
 </style>

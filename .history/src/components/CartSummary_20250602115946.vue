@@ -9,9 +9,7 @@ function removeItem(id) {
   cart.removeFromCart(id)
 }
 
-function goToProduct(id) {
-  router.push(`/product/${id}`)
-}
+function goToproduct(id)
 </script>
 
 <template>
@@ -28,7 +26,7 @@ function goToProduct(id) {
 
       <!-- Left Side: Product Info -->
       <div class="cart-content">
-        <div class="image-price" @click="goToProduct(item.id)">
+        <div class="image-price">
           <img :src="item.image" alt="product" />
           <span>₦{{ item.price }}</span>
         </div>
