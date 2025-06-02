@@ -4,7 +4,7 @@ export const useCartStore = defineStore('cart', {
   // STATE: holds all cart data
   state: () => ({
     cartItems: [], // all items added to the cart array
-    shippingFee: 0, // simple fixed shipping fee
+    shippingFee: 200, // simple fixed shipping fee
   }),
 
   // GETTERS: like computed properties - calculating values from the state
@@ -23,8 +23,8 @@ export const useCartStore = defineStore('cart', {
     },
 
     // Final total including shipping
-    total: (state, getters) => {
-      return state.subtotal + getters.shippingFee
+    total: () => {
+      return this.subtotal + this.shippingFee
     },
   },
 

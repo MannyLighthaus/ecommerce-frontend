@@ -20,7 +20,7 @@ export const useProductStore = defineStore('product', () => {
     loading.value = true
     try {
       // Make API request
-      const response = await fetch('http://localhost:5000/api/products') // backend
+      const response = await fetch('http://localhost:5000/api/products')
 
       // Convert response to JSON
       const data = await response.json()
@@ -47,7 +47,7 @@ export const useProductStore = defineStore('product', () => {
   async function fetchProductById(id) {
     loading.value = true
     try {
-      const response = await fetch(`http://localhost:5000/api/products/${id}`)
+      const response = await fetch(`https://fakestoreapi.com/products/${id}`)
       const item = await response.json()
       product.value = {
         id: item.id,
@@ -56,10 +56,7 @@ export const useProductStore = defineStore('product', () => {
         price: item.price,
         category: item.category,
         image: item.image,
-        rating: {
-          rate: item.rating_rate,
-          count: item.rating_count,
-        },
+        rating: item.rating,
       }
     } catch (err) {
       console.log('Fetch error:', err)

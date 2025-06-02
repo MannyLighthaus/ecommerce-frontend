@@ -12,23 +12,19 @@ import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
 import App from './App.vue'
 import router from './router'
 
-//import bootstrap icons
-import 'bootstrap-icons/font/bootstrap-icons.css'
-
-// import localStorage plugin
-import { localStoragePlugin } from './stores/plugins/localStoragePlugin'
-
 //create app
 const app = createApp(App)
 
-// ✅ create pinia instance and use plugin
-const pinia = createPinia()
-pinia.use(localStoragePlugin) // register plugin before app.use()
+//import bootstrap icons
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 // use Pinia, router and bootstrap
-app.use(pinia)
+app.use(createPinia())
+
 app.use(router)
 app.use(createBootstrap())
 
-//mount app
+import { localStoragePlugin } from './stores/plugins/localStoragePlugin'
+pinia.use(localStoragePlugin)
+
 app.mount('#app')

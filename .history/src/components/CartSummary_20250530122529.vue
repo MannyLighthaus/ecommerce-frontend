@@ -38,7 +38,7 @@ function removeItem(id) {
         </div>
       </div>
     </div>
-
+    <hr />
     <div class="total-card">
       <div class="total-content">
         <h3>Cart Totals</h3>

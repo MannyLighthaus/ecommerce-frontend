@@ -21,14 +21,12 @@ import { localStoragePlugin } from './stores/plugins/localStoragePlugin'
 //create app
 const app = createApp(App)
 
-// ✅ create pinia instance and use plugin
-const pinia = createPinia()
-pinia.use(localStoragePlugin) // register plugin before app.use()
-
 // use Pinia, router and bootstrap
-app.use(pinia)
+app.use(createPinia())
+
 app.use(router)
 app.use(createBootstrap())
 
-//mount app
+pinia.use(localStoragePlugin)
+
 app.mount('#app')

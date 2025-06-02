@@ -31,7 +31,7 @@ onMounted(() => {
     <div v-if="loading" class="text-center loading">
       <!-- <p>Loading product...</p> -->
     </div>
-    <ProductDetailsCard v-else-if="product" :product="product" class="product-details" />
+    <!-- <ProductDetailsCard v-else-if="product" :product="product" class="product-details" /> -->
     <div v-else class="text-center m-5">
       <p>Product not found.</p>
     </div>

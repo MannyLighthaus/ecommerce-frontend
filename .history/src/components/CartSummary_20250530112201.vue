@@ -149,5 +149,8 @@ function removeItem(id) {
 }
 
 @media (min-width: 768px) {
+  .checkout-btn {
+    color: green;
+  }
 }
 </style>

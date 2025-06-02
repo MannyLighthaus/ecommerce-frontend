@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useProductStore } from '../stores/product'
 import { storeToRefs } from 'pinia'
 import { BContainer } from 'bootstrap-vue-next'
@@ -8,13 +8,17 @@ import ProductDetailsCard from '../components/ProductDetailsCard.vue'
 import FooterSection from '@/components/FooterSection.vue'
 
 const route = useRoute()
-
+// const router = useRouter()
 const store = useProductStore()
 const { product, loading } = storeToRefs(store)
 
 onMounted(() => {
   store.fetchProductById(route.params.id)
 })
+
+// function goToShop() {
+//   router.push({ name: 'shop' })
+// }
 </script>
 
 <template>

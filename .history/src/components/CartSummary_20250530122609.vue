@@ -18,6 +18,7 @@ function removeItem(id) {
 
     <!-- Cart Items -->
     <div v-for="item in cart.cartItems" :key="item.id" class="cart-card">
+      <hr />
       <p class="product-title">{{ item.title }}</p>
 
       <!-- Left Side: Product Info -->

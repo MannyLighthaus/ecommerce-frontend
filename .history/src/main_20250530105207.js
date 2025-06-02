@@ -30,5 +30,6 @@ app.use(pinia)
 app.use(router)
 app.use(createBootstrap())
 
-//mount app
+pinia.use(localStoragePlugin)
+
 app.mount('#app')

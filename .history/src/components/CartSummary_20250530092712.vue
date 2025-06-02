@@ -147,7 +147,4 @@ function removeItem(id) {
   font-weight: 400;
   margin-top: 20px;
 }
-
-@media (min-width: 768px) {
-}
 </style>

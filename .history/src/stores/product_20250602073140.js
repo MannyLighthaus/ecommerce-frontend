@@ -56,10 +56,7 @@ export const useProductStore = defineStore('product', () => {
         price: item.price,
         category: item.category,
         image: item.image,
-        rating: {
-          rate: item.rating_rate,
-          count: item.rating_count,
-        },
+        rating: item.rating,
       }
     } catch (err) {
       console.log('Fetch error:', err)

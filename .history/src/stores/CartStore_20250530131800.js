@@ -23,8 +23,8 @@ export const useCartStore = defineStore('cart', {
     },
 
     // Final total including shipping
-    total: (state, getters) => {
-      return state.subtotal + getters.shippingFee
+    total: () => {
+      return this.subtotal + this.shippingFee
     },
   },
 

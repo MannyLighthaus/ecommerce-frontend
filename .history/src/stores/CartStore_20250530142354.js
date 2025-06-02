@@ -12,7 +12,7 @@ export const useCartStore = defineStore('cart', {
     // Calculate the total quantity of items in the cart
     totalItems: (state) => {
       //looping through each cart item, adding the quantity and returning the total
-      return state.cartItems.reduce((sum, item) => sum + item.quantity, 0)
+      return state.cartItems.reduce((sum, item) => sum + item.quantity, 2)
     },
 
     // Subtotal before any additional fees (excluding shipping)

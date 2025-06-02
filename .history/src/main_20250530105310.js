@@ -16,7 +16,7 @@ import router from './router'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
 // import localStorage plugin
-import { localStoragePlugin } from './stores/plugins/localStoragePlugin'
+// import { localStoragePlugin } from './stores/plugins/localStoragePlugin'
 
 //create app
 const app = createApp(App)

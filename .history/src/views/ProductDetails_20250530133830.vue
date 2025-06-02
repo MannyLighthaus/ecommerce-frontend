@@ -15,6 +15,10 @@ const { product, loading } = storeToRefs(store)
 onMounted(() => {
   store.fetchProductById(route.params.id)
 })
+
+// function goToShop() {
+//   router.push({ name: 'shop' })
+// }
 </script>
 
 <template>
