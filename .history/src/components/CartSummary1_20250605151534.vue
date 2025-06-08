@@ -87,6 +87,7 @@ async function checkout() {
               ></i>
             </td>
           </tr>
+          <hr v-if="index !== cart.cartItems.length - 1" />
         </tbody>
       </table>
     </div>
@@ -129,6 +130,7 @@ async function checkout() {
 
 .cart-table th,
 .cart-table td {
+  /* text-align: center; */
   vertical-align: middle;
 }
 

@@ -4,9 +4,8 @@ import { ref } from 'vue'
 import { useCartStore } from '@/stores/CartStore'
 
 import SimpleToast from '@/components/SimpleToast.vue'
+import { onMounted } from 'vue'
 
-// reference to the SimpleToast component.
-// binds the DOM/component instance to the variable.
 const toastRef = ref(null)
 
 // get the product from the parent (productdetails)
@@ -33,8 +32,6 @@ function addToCart() {
     image: props.product.image,
     quantity: quantity.value,
   })
-  // toastRef.value?.showToast(`${props.product.title} added to cart`)
-  toastRef.value?.showToast('Product added successfully')
 }
 
 // to increase the quantity in the selector
@@ -52,7 +49,6 @@ function decreaseQuantity() {
 </script>
 
 <template>
-  <SimpleToast ref="toastRef" />
   <div class="product-details-card">
     <BRow class="mt-4 g-3">
       <BCol md="6">

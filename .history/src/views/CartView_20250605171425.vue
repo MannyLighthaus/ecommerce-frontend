@@ -1,6 +1,6 @@
 <script setup>
 import CartSummary from '@/components/CartSummary.vue'
-import FooterSection from '@/components/FooterSection.vue'
+import Footer from '@/components/FooterSection.vue'
 </script>
 
 <template>
@@ -15,8 +15,8 @@ import FooterSection from '@/components/FooterSection.vue'
       </ol>
     </nav>
   </div>
-  <CartSummary />
-  <FooterSection />
+  <CartTable1 />
+  <Footer />
 </template>
 
 <style scoped>

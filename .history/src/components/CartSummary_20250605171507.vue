@@ -129,6 +129,7 @@ async function checkout() {
 
 .cart-table th,
 .cart-table td {
+  text-align: center;
   vertical-align: middle;
 }
 

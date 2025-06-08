@@ -6,7 +6,7 @@ import { useCartStore } from '@/stores/CartStore'
 import SimpleToast from '@/components/SimpleToast.vue'
 
 // reference to the SimpleToast component.
-// binds the DOM/component instance to the variable.
+//binds the DOM/component instance to the variable.
 const toastRef = ref(null)
 
 // get the product from the parent (productdetails)

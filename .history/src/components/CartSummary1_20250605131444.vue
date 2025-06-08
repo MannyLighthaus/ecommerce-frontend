@@ -73,12 +73,11 @@ async function checkout() {
                 <span>{{ item.title }}</span>
               </div>
             </td>
-            <td>₦ {{ item.price.toLocaleString() }}</td>
+            <td>₦{{ item.price.toLocaleString() }}</td>
             <td>
               <input type="number" v-model="item.quantity" min="1" class="qty-text" />
             </td>
-            <td>₦ {{ (item.price * item.quantity).toLocaleString() }}</td>
-
+            <td>₦{{ (item.price * item.quantity).toLocaleString() }}</td>
             <td>
               <i
                 class="bi bi-trash3-fill"
@@ -129,6 +128,7 @@ async function checkout() {
 
 .cart-table th,
 .cart-table td {
+  /* text-align: center; */
   vertical-align: middle;
 }
 

@@ -55,7 +55,7 @@ async function checkout() {
   <div class="cart-wrapper">
     <!-- Scrollable Table -->
     <div class="table-scroll">
-      <table class="cart-table table table-borderless">
+      <!-- <table class="cart-table table table-borderless"> -->
         <thead>
           <tr>
             <th>Product</th>
@@ -129,6 +129,7 @@ async function checkout() {
 
 .cart-table th,
 .cart-table td {
+  /* text-align: center; */
   vertical-align: middle;
 }
 

@@ -90,11 +90,11 @@ import { BCard, BCardText, BButton } from 'bootstrap-vue-next'
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 100%;
+    height: 100vh;
   }
   .hero-image {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
   }
   .hero-card {
@@ -103,6 +103,8 @@ import { BCard, BCardText, BButton } from 'bootstrap-vue-next'
     left: 70%;
     transform: translate(-50%, -50%);
     width: 50%;
+    /* height: 300px;
+    padding: 24px; */
   }
   .arrival-text {
     font-size: 14px;

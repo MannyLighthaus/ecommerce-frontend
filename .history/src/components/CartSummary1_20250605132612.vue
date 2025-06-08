@@ -6,10 +6,12 @@ import { useRouter } from 'vue-router'
 const cart = useCartStore()
 const router = useRouter()
 
+// remove item from cart
 function removeItem(id) {
   cart.removeFromCart(id)
 }
 
+// function to route to product description
 function goToProduct(id) {
   router.push(`/product/${id}`)
 }
@@ -32,7 +34,7 @@ async function checkout() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(orderData),
     })
-    console.log('response', res, orderData)
+    console.log('response:', orderData)
 
     if (!res.ok) {
       const error = await res.json()
@@ -41,7 +43,7 @@ async function checkout() {
     }
 
     // Success: Clear cart and go to success page
-    cart.clearCart()
+    cart.clearCart() //method from the store
     router.push('/order-success')
   } catch (error) {
     console.error('Checkout Error:', error)
@@ -71,11 +73,11 @@ async function checkout() {
                 <span>{{ item.title }}</span>
               </div>
             </td>
-            <td>₦{{ item.price.toLocaleString() }}</td>
+            <td>₦ {{ item.price.toLocaleString() }}</td>
             <td>
               <input type="number" v-model="item.quantity" min="1" class="qty-text" />
             </td>
-            <td>₦{{ (item.price * item.quantity).toLocaleString() }}</td>
+            <td>₦ {{ (item.price * item.quantity).toLocaleString() }}</td>
             <td>
               <i
                 class="bi bi-trash3-fill"
