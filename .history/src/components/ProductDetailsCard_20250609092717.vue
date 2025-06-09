@@ -88,7 +88,6 @@ function decreaseQuantity() {
 <style>
 .product-details-card .card-container {
   border: none;
-  padding-inline: 20px;
 }
 
 .product-details-card .card-container .card-body {
