@@ -27,18 +27,21 @@ defineExpose({ showToast })
   top: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  padding-block: 5px;
-  padding-inline: 10px;
-  background-color: #198754;
+  padding: 0.5rem 1.5rem;
+  background-color: #198754; /* Bootstrap "bg-success" */
   color: white;
-  border-radius: 5px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1050;
+  transition: opacity 0.3s ease;
   font-size: 14px;
-  text-align: center;
 }
 
+/* Responsive adjustments (larger toast on wider screens) */
 @media (min-width: 768px) {
   .toast-message {
-    font-size: 20px;
+    font-size: 16px;
+    padding: 0.75rem 2rem;
     top: 2rem;
   }
 }

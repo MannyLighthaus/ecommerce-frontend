@@ -32,13 +32,17 @@ defineExpose({ showToast })
   background-color: #198754;
   color: white;
   border-radius: 5px;
-  font-size: 14px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  z-index: 1050;
+  transition: opacity 0.3s ease;
+  font-size: 16px;
   text-align: center;
 }
 
 @media (min-width: 768px) {
   .toast-message {
-    font-size: 20px;
+    font-size: 16px;
+    padding: 0.75rem 2rem;
     top: 2rem;
   }
 }

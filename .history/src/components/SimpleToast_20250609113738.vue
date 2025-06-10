@@ -4,7 +4,7 @@ import { ref } from 'vue'
 const visible = ref(false)
 const message = ref('')
 
-function showToast(msg, duration = 2000) {
+function showToast(msg, duration = 299000) {
   message.value = msg
   visible.value = true
   setTimeout(() => {
@@ -32,13 +32,14 @@ defineExpose({ showToast })
   background-color: #198754;
   color: white;
   border-radius: 5px;
+
   font-size: 14px;
   text-align: center;
 }
 
 @media (min-width: 768px) {
   .toast-message {
-    font-size: 20px;
+    font-size: 18px;
     top: 2rem;
   }
 }

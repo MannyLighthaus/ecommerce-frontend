@@ -4,7 +4,7 @@ import { ref } from 'vue'
 const visible = ref(false)
 const message = ref('')
 
-function showToast(msg, duration = 2000) {
+function showToast(msg, duration = 299000) {
   message.value = msg
   visible.value = true
   setTimeout(() => {
