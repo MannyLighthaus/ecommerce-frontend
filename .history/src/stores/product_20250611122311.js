@@ -23,7 +23,7 @@ export const useProductStore = defineStore('product', () => {
     loading.value = true
     try {
       // Make API request
-      const response = await fetch(`${API_BASE_URL}/products`) // backend
+      const response = await fetch('https://ecommerce-backend-1wzb.onrender.com/api/products') // backend
 
       // Convert response to JSON
       const data = await response.json()
@@ -50,7 +50,7 @@ export const useProductStore = defineStore('product', () => {
   async function fetchProductById(id) {
     loading.value = true
     try {
-      const response = await fetch(`${API_BASE_URL}/products/${id}`)
+      const response = await fetch(`https://ecommerce-backend-1wzb.onrender.com/api/products/${id}`)
       const item = await response.json()
       product.value = {
         id: item.id,
