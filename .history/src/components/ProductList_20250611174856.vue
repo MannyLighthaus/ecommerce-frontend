@@ -43,8 +43,7 @@ function goToProduct(id) {
 </script>
 
 <template>
-  <SimpleToast ref="toastRef" />
-
+  <!-- Product listings -->
   <section>
     <BContainer class="product-container">
       <BRow class="mt-5 mb-3">
@@ -53,23 +52,22 @@ function goToProduct(id) {
         </BCol>
       </BRow>
 
+      <!-- Loading state -->
       <div v-if="loading" class="loading-container">
         <div class="loading"></div>
       </div>
 
+      <!-- Products -->
       <BRow v-else-if="products.length">
         <BCol md="4" v-for="product in products" :key="product.id" class="mb-4">
-          <BCard class="h-100">
-            <div style="cursor: pointer" @click="goToProduct(product.id)">
-              <BCardImg :src="product.image" alt="Product" class="product-image" />
-              <BCardTitle class="truncate-title">{{ product.title }}</BCardTitle>
-              <BCardText>₦ {{ product.price }}</BCardText>
-            </div>
-
+          <BCard class="h-100" style="cursor: pointer" @click="goToProduct(product.id)">
+            <BCardImg :src="product.image" alt="Product" class="product-image" />
+            <BCardTitle class="truncate-title"> {{ product.title }}</BCardTitle>
+            <BCardText>₦ {{ product.price }}</BCardText>
             <div class="btn-icon-container">
-              <!-- Mobile view add to cart -->
-              <BButton class="button" @click="addToCartFromList(product)">Add to cart</BButton>
+              <!-- mobile view -->
 
+              <BButton class="button">Add to cart</BButton>
               <!-- icons -->
               <div class="nav-icons">
                 <i class="bi bi-arrow-left-right"></i>
@@ -80,7 +78,7 @@ function goToProduct(id) {
           </BCard>
         </BCol>
       </BRow>
-
+      <!-- No products -->
       <div v-else class="text-center">
         <p>No products available.</p>
       </div>
