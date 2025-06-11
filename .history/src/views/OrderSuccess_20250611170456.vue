@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { useCartStore } from '@/stores/CartStore'
+import { useCartStore } from '@/stores/cart'
 
 const loading = ref(true)
 const cart = useCartStore()
@@ -10,7 +10,7 @@ const router = useRouter()
 onMounted(async () => {
   // Redirect if no items in cart
   if (cart.cartItems.length === 0) {
-    router.push('/shop')
+    router.push('/')
     return
   }
 

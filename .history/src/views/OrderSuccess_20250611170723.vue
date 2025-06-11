@@ -10,7 +10,7 @@ const router = useRouter()
 onMounted(async () => {
   // Redirect if no items in cart
   if (cart.cartItems.length === 0) {
-    router.push('/shop')
+    router.push('/')
     return
   }
 
