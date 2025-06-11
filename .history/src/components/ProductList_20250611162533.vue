@@ -36,8 +36,8 @@ function goToProduct(id) {
       </BRow>
 
       <!-- Loading state -->
-      <div v-if="loading" class="loading-container">
-        <div class="loading"></div>
+      <div v-if="loading" class="text-center loading">
+        <p>Loading products...</p>
       </div>
 
       <!-- Products -->
@@ -113,30 +113,6 @@ function goToProduct(id) {
 .btn-icon-container {
   display: flex;
   justify-content: space-between;
-}
-.loading-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px; /* Adjust based on your section height */
-}
-
-.loading {
-  border: 6px solid #f9f1e7;
-  border-top: 6px solid rgba(184, 142, 47, 1);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @media (min-width: 768px) {

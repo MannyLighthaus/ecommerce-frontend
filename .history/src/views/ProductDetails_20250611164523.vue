@@ -90,7 +90,7 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 400px; /* Adjust based on your section height */
+  min-height: 200px; /* Adjust based on your section height */
 }
 
 .loading {
@@ -100,6 +100,7 @@ onMounted(() => {
   width: 40px;
   height: 40px;
   animation: spin 1s linear infinite;
+  margin: 50%;
 }
 
 @keyframes spin {

@@ -122,8 +122,8 @@ function goToProduct(id) {
 }
 
 .loading {
-  border: 6px solid #f9f1e7;
-  border-top: 6px solid rgba(184, 142, 47, 1);
+  border: 3px solid #f9f1e7;
+  border-top: 3px solid rgba(184, 142, 47, 1);
   border-radius: 50%;
   width: 40px;
   height: 40px;

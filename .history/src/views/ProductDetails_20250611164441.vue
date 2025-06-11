@@ -28,7 +28,6 @@ onMounted(() => {
         </li>
       </ol>
     </nav>
-
     <!-- loading state -->
     <div v-if="loading" class="loading-container">
       <div class="loading"></div>
@@ -85,14 +84,6 @@ onMounted(() => {
   margin-inline: 20px;
   margin-block-end: 20%;
 }
-
-.loading-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 400px; /* Adjust based on your section height */
-}
-
 .loading {
   border: 6px solid #f9f1e7;
   border-top: 6px solid rgba(184, 142, 47, 1);
@@ -100,6 +91,7 @@ onMounted(() => {
   width: 40px;
   height: 40px;
   animation: spin 1s linear infinite;
+  margin: 50%;
 }
 
 @keyframes spin {

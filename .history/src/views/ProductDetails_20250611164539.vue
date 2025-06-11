@@ -100,6 +100,7 @@ onMounted(() => {
   width: 40px;
   height: 40px;
   animation: spin 1s linear infinite;
+  margin: 50%;
 }
 
 @keyframes spin {

@@ -90,7 +90,7 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 400px; /* Adjust based on your section height */
+  min-height: 200px; /* Adjust based on your section height */
 }
 
 .loading {

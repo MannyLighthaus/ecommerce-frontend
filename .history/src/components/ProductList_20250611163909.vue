@@ -36,8 +36,8 @@ function goToProduct(id) {
       </BRow>
 
       <!-- Loading state -->
-      <div v-if="loading" class="loading-container">
-        <div class="loading"></div>
+      <div v-if="loading" class="loading">
+        <!-- <p>Loading products...</p> -->
       </div>
 
       <!-- Products -->
@@ -118,7 +118,7 @@ function goToProduct(id) {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 200px; /* Adjust based on your section height */
+  min-height: 300px; /* Adjust based on your section height */
 }
 
 .loading {
