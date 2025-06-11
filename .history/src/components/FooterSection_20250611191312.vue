@@ -91,6 +91,7 @@
   flex-direction: column;
   gap: 30px;
   justify-content: space-between;
+
   width: 100%;
 }
 hr {
