@@ -17,8 +17,4 @@ body {
   padding: 0;
   overflow-x: auto;
 }
-html,
-body {
-  overflow-x: hidden;
-}
 </style>
