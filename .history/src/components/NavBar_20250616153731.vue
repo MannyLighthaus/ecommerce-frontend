@@ -112,12 +112,12 @@ const cartCount = computed(() => cartStore.cartItems.length)
 }
 
 .nav-link {
-  font-size: 16px;
+  font-size: 3opx;
   color: black;
   font-weight: 500;
 }
 .nav-link:hover {
-  color: rgba(184, 142, 47, 1);
+  baccolor: rgb(162, 21, 21);
 }
 .cart-icon-wrapper {
   position: relative;

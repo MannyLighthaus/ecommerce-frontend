@@ -131,7 +131,11 @@ function goToProduct(id) {
 }
 
 .button:hover {
-  background-color: rgba(220, 170, 60, 1); /* brighter gold tone */
+  background-color:.nav-link > a:hover {
+    color: #bfa14a !important;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  } /* brighter gold tone */
   color: #000; /* switch text to black for contrast */
   transform: scale(1.05); /* slightly grow */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* subtle shadow */
@@ -190,7 +194,7 @@ function goToProduct(id) {
 }
 
 .product-card:hover {
-  border-color: rgba(184, 142, 47);
+  border-color: rgba(184, 142, 47, 1);
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* soft shadow */
   background-color: white;
