@@ -23,7 +23,7 @@ onMounted(() => {
   <!-- Range section -->
 
   <section>
-    <BContainer>
+    <BContainer fluid>
       <BRow>
         <BCol class="d-flex flex-column text-center my-5">
           <h2 class="range-header">Browse The Range</h2>
@@ -31,7 +31,7 @@ onMounted(() => {
         </BCol>
       </BRow>
 
-      <BRow class="text-center g-2">
+      <BRow class="text-center g-2 px-5">
         <BCol cols="12" md="4">
           <div class="image-wrapper">
             <img src="@/assets/dining.png" alt="dining" class="img-fluid" />
