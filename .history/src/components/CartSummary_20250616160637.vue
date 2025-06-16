@@ -19,6 +19,12 @@ function goToProduct(id) {
 function checkout() {
   router.push('/order-success')
 }
+
+// function to limit quantity manually inputed
+function limitQuantity(item) {
+  if (item.quantity > 100) item.quantity = 100
+  if (item.quantity < 1) item.quantity = 1
+}
 </script>
 
 <template>

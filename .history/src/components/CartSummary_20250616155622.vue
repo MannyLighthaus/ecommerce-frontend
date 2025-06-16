@@ -45,7 +45,7 @@ function checkout() {
             </td>
             <td>₦ {{ item.price.toLocaleString() }}</td>
             <td>
-              <input type="number" v-model="item.quantity" min="1" max="10" class="qty-text" />
+              <input type="number" v-model="item.quantity" min="1" class="qty-text" />
             </td>
             <td>₦ {{ (item.price * item.quantity).toLocaleString() }}</td>
 
@@ -100,10 +100,6 @@ function checkout() {
 .cart-table th,
 .cart-table td {
   vertical-align: middle;
-  max-width: 150px; /* Prevents overly wide cells */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .product-info {
@@ -121,7 +117,7 @@ function checkout() {
 }
 
 .qty-text {
-  width: 50px;
+  width: 100px;
   text-align: center;
   border: 1px solid #9f9f9f;
   border-radius: 5px;

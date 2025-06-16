@@ -19,6 +19,12 @@ function goToProduct(id) {
 function checkout() {
   router.push('/order-success')
 }
+
+// function to limit quantity manually inputed
+function limitQuantity(item) {
+  if (item.quantity > 100) item.quantity = 100
+  if (item.quantity < 1) item.quantity = 1
+}
 </script>
 
 <template>
@@ -45,7 +51,14 @@ function checkout() {
             </td>
             <td>₦ {{ item.price.toLocaleString() }}</td>
             <td>
-              <input type="number" v-model="item.quantity" min="1" max="10" class="qty-text" />
+              <input
+                type="number"
+                v-model="item.quantity"
+                min="1"
+                max="10"
+                class="qty-text"
+                @click="limitQuantity"
+              />
             </td>
             <td>₦ {{ (item.price * item.quantity).toLocaleString() }}</td>
 

@@ -38,7 +38,7 @@ function addToCart() {
   toastRef.value?.showToast('Product added successfully')
 }
 
-// to increase the quantity in the selector. you can only add 10
+// to increase the quantity in the selector
 function increaseQuantity() {
   if (quantity.value < 10) {
     quantity.value++

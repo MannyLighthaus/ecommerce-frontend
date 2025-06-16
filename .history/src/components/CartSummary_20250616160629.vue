@@ -19,6 +19,8 @@ function goToProduct(id) {
 function checkout() {
   router.push('/order-success')
 }
+
+// function to limit quantity manually inputed
 </script>
 
 <template>

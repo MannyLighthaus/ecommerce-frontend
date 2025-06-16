@@ -45,7 +45,7 @@ function checkout() {
             </td>
             <td>₦ {{ item.price.toLocaleString() }}</td>
             <td>
-              <input type="number" v-model="item.quantity" min="1" max="10" class="qty-text" />
+              <input type="number" v-model="item.quantity" min="1" max="50" class="qty-text" />
             </td>
             <td>₦ {{ (item.price * item.quantity).toLocaleString() }}</td>
 
