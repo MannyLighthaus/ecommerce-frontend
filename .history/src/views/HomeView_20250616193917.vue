@@ -75,13 +75,13 @@ onMounted(() => {
   font-weight: bold;
 }
 /* Add hover effect on images */
-.image-wrapper img.img-fluid {
+.text-center img.img-fluid {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
-.image-wrapper img.img-fluid:hover {
+.text-center img.img-fluid:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   cursor: pointer;

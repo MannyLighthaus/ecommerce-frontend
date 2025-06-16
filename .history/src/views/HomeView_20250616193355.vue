@@ -46,10 +46,7 @@ onMounted(() => {
           <p class="text">Living</p>
         </BCol>
         <BCol cols="12" md="4">
-          <div class="image-wrapper">
-            <img src="@/assets/bedroom.png" alt="bedroom" class="img-fluid" />
-          </div>
-
+          <img src="@/assets/bedroom.png" alt="bedroom" class="img-fluid" />
           <p class="text">Bedroom</p>
         </BCol>
       </BRow>
@@ -75,20 +72,17 @@ onMounted(() => {
   font-weight: bold;
 }
 /* Add hover effect on images */
-.image-wrapper img.img-fluid {
+.text-center img.img-fluid {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+  border-radius: 8px;
 }
 
-.image-wrapper img.img-fluid:hover {
+.text-center img.img-fluid:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-}
-.image-wrapper {
-  overflow: hidden;
-  border-radius: 8px;
 }
 
 @media (min-width: 768px) {
