@@ -120,7 +120,7 @@ function goToProduct(id) {
   cursor: pointer;
   border: none;
   border-radius: 4px; /* slightly rounded corners */
-  width: 100px;
+  width: 150px;
 
   /* Smooth transitions */
   transition:

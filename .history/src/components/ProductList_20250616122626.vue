@@ -116,11 +116,11 @@ function goToProduct(id) {
   padding: 10px;
   font-size: 14px;
   text-decoration: none;
-
+  text-transform: uppercase;
   cursor: pointer;
   border: none;
   border-radius: 4px; /* slightly rounded corners */
-  width: 100px;
+  width: 150px;
 
   /* Smooth transitions */
   transition:

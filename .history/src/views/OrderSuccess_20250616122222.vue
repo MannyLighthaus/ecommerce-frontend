@@ -6,7 +6,6 @@ import { useCartStore } from '@/stores/CartStore'
 const loading = ref(true)
 const cart = useCartStore()
 const router = useRouter()
-
 // .env url
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 

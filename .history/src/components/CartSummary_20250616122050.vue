@@ -16,6 +16,9 @@ function goToProduct(id) {
   router.push(`/product/${id}`)
 }
 
+// .env url
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
+
 function checkout() {
   router.push('/order-success')
 }
