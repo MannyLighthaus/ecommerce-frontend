@@ -76,11 +76,11 @@ import { BCard, BCardText, BButton } from 'bootstrap-vue-next'
   width: 150px;
 
   /* Smooth transitions */
-  transition:
+  /* transition:
     background-color 0.3s ease,
     color 0.3s ease,
     transform 0.2s ease,
-    box-shadow 0.2s ease;
+    box-shadow 0.2s ease; */
 }
 
 .button:hover {
@@ -88,11 +88,6 @@ import { BCard, BCardText, BButton } from 'bootstrap-vue-next'
   color: #000; /* switch text to black for contrast */
   transform: scale(1.05); /* slightly grow */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* subtle shadow */
-}
-
-.button:active {
-  transform: scale(0.97); /* slightly shrink */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* reduce shadow */
 }
 
 .hero-card {

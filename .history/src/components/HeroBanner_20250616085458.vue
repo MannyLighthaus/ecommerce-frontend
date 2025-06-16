@@ -90,11 +90,6 @@ import { BCard, BCardText, BButton } from 'bootstrap-vue-next'
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* subtle shadow */
 }
 
-.button:active {
-  transform: scale(0.97); /* slightly shrink */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* reduce shadow */
-}
-
 .hero-card {
   position: absolute;
   top: 50px;

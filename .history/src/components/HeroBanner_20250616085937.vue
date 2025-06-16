@@ -86,13 +86,8 @@ import { BCard, BCardText, BButton } from 'bootstrap-vue-next'
 .button:hover {
   background-color: rgba(220, 170, 60, 1); /* brighter gold tone */
   color: #000; /* switch text to black for contrast */
-  transform: scale(1.05); /* slightly grow */
+  /* transform: scale(1.05); slightly grow */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* subtle shadow */
-}
-
-.button:active {
-  transform: scale(0.97); /* slightly shrink */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* reduce shadow */
 }
 
 .hero-card {
