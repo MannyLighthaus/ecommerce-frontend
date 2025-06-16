@@ -27,7 +27,7 @@ onMounted(() => {
       <BRow>
         <BCol class="d-flex flex-column text-center my-5">
           <h2 class="range-header">Browse The Range</h2>
-          <p class="range-text">Explore our handpicked selections made just for you.</p>
+          <p class="range-text">Discover a variety of styles crafted to elevate your space..</p>
         </BCol>
       </BRow>
 
