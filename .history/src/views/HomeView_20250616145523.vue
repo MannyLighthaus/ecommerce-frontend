@@ -66,19 +66,6 @@ onMounted(() => {
   margin-block-end: 20px;
   font-weight: bold;
 }
-/* Add hover effect on images */
-.text-center img.img-fluid {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  border-radius: 8px;
-}
-
-.text-center img.img-fluid:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-}
 
 @media (min-width: 768px) {
   .range-header {

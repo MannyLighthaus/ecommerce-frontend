@@ -6,6 +6,7 @@ import { BContainer, BRow, BCol } from 'bootstrap-vue-next'
 import HeroBanner from '@/components/HeroBanner.vue'
 import ProductList from '@/components/ProductList.vue'
 import FooterSection from '@/components/FooterSection.vue'
+import RangeSection from '@/components/RangeSection.vue'
 
 // Use Pinia store
 const store = useProductStore()
@@ -20,8 +21,7 @@ onMounted(() => {
   <!-- Hero section -->
   <HeroBanner />
 
-  <!-- Range section -->
-
+  <!-- Category section -->
   <section>
     <BContainer fluid>
       <BRow>
@@ -65,19 +65,6 @@ onMounted(() => {
   margin-block-start: 10px;
   margin-block-end: 20px;
   font-weight: bold;
-}
-/* Add hover effect on images */
-.text-center img.img-fluid {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  border-radius: 8px;
-}
-
-.text-center img.img-fluid:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
 }
 
 @media (min-width: 768px) {

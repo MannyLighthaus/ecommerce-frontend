@@ -1,29 +1,22 @@
 <script setup>
-import { onMounted } from 'vue'
-
-import { useProductStore } from '../stores/product'
-import { BContainer, BRow, BCol } from 'bootstrap-vue-next'
-import HeroBanner from '@/components/HeroBanner.vue'
-import ProductList from '@/components/ProductList.vue'
-import FooterSection from '@/components/FooterSection.vue'
-
-// Use Pinia store
-const store = useProductStore()
-
-// Fetch products
-onMounted(() => {
-  store.fetchProducts()
-})
+const ranges = [
+  {
+    label: 'Dining',
+    image: new URL('@/assets/dining.png', import.meta.url).href,
+  },
+  {
+    label: 'Living',
+    image: new URL('@/assets/living room.png', import.meta.url).href,
+  },
+  {
+    label: 'Bedroom',
+    image: new URL('@/assets/bedroom.png', import.meta.url).href,
+  },
+]
 </script>
 
 <template>
-  <!-- Hero section -->
-  <HeroBanner />
-
-  <!-- Range section -->
-
-  <section>
-    <BContainer fluid>
+      <BContainer fluid>
       <BRow>
         <BCol class="d-flex flex-column text-center my-5">
           <h2 class="range-header">Browse The Range</h2>
@@ -47,12 +40,6 @@ onMounted(() => {
       </BRow>
     </BContainer>
   </section>
-
-  <!-- Product listings -->
-  <ProductList />
-
-  <!-- footer -->
-  <FooterSection />
 </template>
 
 <style scoped>
@@ -60,24 +47,30 @@ onMounted(() => {
   font-size: 24px;
   font-weight: bold;
 }
-.text {
-  font-size: 18px;
-  margin-block-start: 10px;
-  margin-block-end: 20px;
-  font-weight: bold;
+
+.range-text {
+  font-size: 16px;
+  color: #555;
 }
-/* Add hover effect on images */
-.text-center img.img-fluid {
+
+.range-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.range-image-wrapper {
+  /* max-width: 250px;
+  width: 100%; */
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-  border-radius: 8px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.text-center img.img-fluid:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+.range-image-wrapper:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -88,7 +81,8 @@ onMounted(() => {
   .range-text {
     font-size: 20px;
   }
-  .text {
+
+  .range-label {
     font-size: 24px;
   }
 }
