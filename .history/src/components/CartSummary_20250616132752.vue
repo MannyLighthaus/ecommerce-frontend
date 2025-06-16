@@ -157,20 +157,16 @@ function checkout() {
   font-size: 16px;
   font-weight: 400;
   margin-top: 20px;
-  transition:
+  /* transition:
     background-color 0.3s ease,
     color 0.3s ease,
     transform 0.2s ease;
-}
+} */
 .checkout-btn:hover {
   background-color: rgba(184, 142, 47, 1); /* gold */
   color: #000;
   border-color: rgba(184, 142, 47, 1);
   transform: scale(1.03);
-}
-.checkout-btn:active {
-  background-color: rgba(184, 142, 47, 0.8);
-  transform: scale(0.97);
 }
 
 .cart-table thead {

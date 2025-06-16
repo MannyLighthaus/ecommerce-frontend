@@ -164,13 +164,9 @@ function checkout() {
 }
 .checkout-btn:hover {
   background-color: rgba(184, 142, 47, 1); /* gold */
-  color: #000;
+  color: #000
   border-color: rgba(184, 142, 47, 1);
   transform: scale(1.03);
-}
-.checkout-btn:active {
-  background-color: rgba(184, 142, 47, 0.8);
-  transform: scale(0.97);
 }
 
 .cart-table thead {

@@ -154,7 +154,7 @@ function checkout() {
   border-radius: 0;
   text-align: center;
   padding: 12px 0;
-  font-size: 16px;
+  font-size: 1px;
   font-weight: 400;
   margin-top: 20px;
   transition:

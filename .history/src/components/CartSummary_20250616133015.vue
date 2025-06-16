@@ -149,7 +149,7 @@ function checkout() {
 .checkout-btn {
   background-color: rgba(184, 142, 47, 1);
   color: #ffffff;
-  width: 100%;
+  /* width: 100%; */
   border: none;
   border-radius: 0;
   text-align: center;
