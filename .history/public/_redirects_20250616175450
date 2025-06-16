@@ -1,0 +1,7 @@
+/* /index.html 200
+
+| Part          | Meaning                                       |
+| ------------- | --------------------------------------------- |
+| `/*`          | Match all paths (like `/`, `/about`, `/cart`) |
+| `/index.html` | Serve the `index.html` file in response       |
+| `200`         | Return HTTP status code 200 (OK)              |
