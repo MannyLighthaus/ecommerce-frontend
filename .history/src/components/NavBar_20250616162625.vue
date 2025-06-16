@@ -67,9 +67,8 @@ const cartCount = computed(() => cartStore.cartItems.length)
       <i class="bi bi-heart"></i>
       <router-link to="/cart" class="cart-icon-wrapper">
         <i class="bi bi-cart"></i>
-
-        <!-- only show if greater than 0, :key retriggers the animation by re-rendering the badge each time the number changes -->
-        <span class="cart-count-badge" v-if="cartCount > 0" :key="cartCount">{{ cartCount }}</span>
+        <!-- only show if greater than 0 -->
+        <span class="cart-count-badge" v-if="cartCount > 0">{{ cartCount }}</span>
       </router-link>
     </div>
   </BNavbar>
@@ -139,11 +138,11 @@ const cartCount = computed(() => cartStore.cartItems.length)
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  animation: pop 0.3s ease;
+  animation: bounce 0.3s ease;
   transition: transform 0.3s;
 }
 
-@keyframes pop {
+@keyframes bounce {
   0% {
     transform: scale(1);
   }

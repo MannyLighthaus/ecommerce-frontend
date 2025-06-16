@@ -139,19 +139,21 @@ const cartCount = computed(() => cartStore.cartItems.length)
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  animation: pop 0.3s ease;
-  transition: transform 0.3s;
+  animation: bounce 0.3s ease;
 }
 
-@keyframes pop {
+@keyframes bounce {
   0% {
-    transform: scale(1);
+    transform: translateY(0);
   }
-  50% {
-    transform: scale(1.5);
+  30% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(2px);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
   }
 }
 
