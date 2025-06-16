@@ -67,7 +67,6 @@ function goToProduct(id) {
               <BCardText>₦ {{ product.price }}</BCardText>
             </div>
 
-            <!-- Button and Icons section -->
             <div class="btn-icon-container">
               <!-- Mobile view add to cart -->
               <BButton class="button" @click="addToCartFromList(product)">Add to cart</BButton>
@@ -158,19 +157,6 @@ function goToProduct(id) {
   100% {
     transform: rotate(360deg);
   }
-}
-
-.product-card {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  overflow: hidden;
-}
-
-.product-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* soft shadow */
-  background-color: white;
 }
 
 @media (min-width: 768px) {

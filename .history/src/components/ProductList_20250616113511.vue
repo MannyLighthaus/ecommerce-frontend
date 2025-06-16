@@ -61,7 +61,7 @@ function goToProduct(id) {
         <BCol md="4" v-for="product in products" :key="product.id" class="mb-4">
           <BCard class="h-100 product-card">
             <!-- Card Content Clickable -->
-            <div style="cursor: pointer" @click="goToProduct(product.id)">
+            <div class="card-body-hover" style="cursor: pointer" @click="goToProduct(product.id)">
               <BCardImg :src="product.image" alt="Product" class="product-image" />
               <BCardTitle class="truncate-title">{{ product.title }}</BCardTitle>
               <BCardText>₦ {{ product.price }}</BCardText>
@@ -164,13 +164,16 @@ function goToProduct(id) {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-  overflow: hidden;
+  overflow: hidden; /* prevent child content from spilling out */
 }
 
 .product-card:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* soft shadow */
-  background-color: white;
+}
+
+.card-body-hover {
+  background-color: rgba(255, 0, 0, 0.2); /* red tint for debug */
 }
 
 @media (min-width: 768px) {

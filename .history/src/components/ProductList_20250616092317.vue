@@ -160,19 +160,6 @@ function goToProduct(id) {
   }
 }
 
-.product-card {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  overflow: hidden;
-}
-
-.product-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* soft shadow */
-  background-color: white;
-}
-
 @media (min-width: 768px) {
   .product-header-text {
     font-size: 40px;
