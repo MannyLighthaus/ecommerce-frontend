@@ -99,28 +99,22 @@ function decreaseQuantity() {
 }
 
 .product-details-card .button {
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(184, 142, 47, 1);
+  color: black;
+  background-color: white;
   font-size: 20px;
   cursor: pointer;
-  border: none;
+  border-color: black;
   border-radius: 8px;
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
     transform 0.2s ease;
 }
-.product-details-card .button:hover {
-  background-color: rgba(220, 170, 60, 1);
-  color: #000;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Pressed state */
 .product-details-card .button:active {
-  transform: scale(0.97);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background-color: #f9f1e7;
+  color: inherit;
+  border-color: inherit;
+  box-shadow: none;
 }
 
 .product-details-card .card-img {

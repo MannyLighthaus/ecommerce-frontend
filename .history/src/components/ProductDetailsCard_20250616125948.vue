@@ -111,16 +111,16 @@ function decreaseQuantity() {
     transform 0.2s ease;
 }
 .product-details-card .button:hover {
-  background-color: rgba(220, 170, 60, 1);
-  color: #000;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: rgba(184, 142, 47, 1); /* gold */
+  color: white;
+  border-color: rgba(184, 142, 47, 1);
+  transform: scale(1.03);
 }
 
 /* Pressed state */
 .product-details-card .button:active {
+  background-color: rgba(184, 142, 47, 0.8);
   transform: scale(0.97);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .product-details-card .card-img {
