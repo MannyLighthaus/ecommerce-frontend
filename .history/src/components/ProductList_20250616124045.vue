@@ -190,7 +190,7 @@ function goToProduct(id) {
 }
 
 .product-card:hover {
-  border-color: rgba(184, 142, 47, 1);
+  border-color: green;
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* soft shadow */
   background-color: white;

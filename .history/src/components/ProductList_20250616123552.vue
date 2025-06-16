@@ -181,16 +181,13 @@ function goToProduct(id) {
 
 .product-card {
   border: 1px solid #ddd;
-  border-radius: 6px;
   transition:
-    border-color 0.3s ease,
     transform 0.3s ease,
     box-shadow 0.3s ease;
-  overflow: hidden; /* keep child elements inside rounded corners */
+  overflow: hidden;
 }
 
 .product-card:hover {
-  border-color: rgba(184, 142, 47, 1);
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* soft shadow */
   background-color: white;
