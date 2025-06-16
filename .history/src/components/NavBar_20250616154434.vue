@@ -117,7 +117,7 @@ const cartCount = computed(() => cartStore.cartItems.length)
   font-weight: 500;
 }
 .nav-link:hover {
-  color: rgba(220, 170, 60, 1);
+  color: rgba(184, 142, 47, 1);
 }
 .cart-icon-wrapper {
   position: relative;
@@ -128,7 +128,7 @@ const cartCount = computed(() => cartStore.cartItems.length)
   position: absolute;
   top: -2px;
   right: -8px;
-  background-color: rgba(184, 142, 47, 1);
+  background-color: black;
   color: white;
   border-radius: 50%;
   font-size: 14px;
