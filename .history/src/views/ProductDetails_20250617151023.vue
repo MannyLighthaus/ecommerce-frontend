@@ -123,7 +123,6 @@ onMounted(() => {
   }
   .breadcrumb-item.active {
     font-size: 16px;
-    max-width: 500px;
   }
   .breadcrumb-item + .breadcrumb-item::before {
     font-size: 18px;

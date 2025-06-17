@@ -112,7 +112,7 @@ onMounted(() => {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 7680px) {
   .breadcrumb-container {
     padding: 40px;
   }
@@ -123,11 +123,11 @@ onMounted(() => {
   }
   .breadcrumb-item.active {
     font-size: 16px;
-    max-width: 500px;
   }
   .breadcrumb-item + .breadcrumb-item::before {
     font-size: 18px;
     margin-right: 10px;
+    float: unset;
   }
 
   .breadcrumb {

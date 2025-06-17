@@ -111,34 +111,9 @@ onMounted(() => {
     transform: rotate(360deg);
   }
 }
-
-@media (min-width: 768px) {
-  .breadcrumb-container {
-    padding: 40px;
-  }
-  .breadcrumb-item {
-    a {
-      font-size: 16px;
-    }
-  }
-  .breadcrumb-item.active {
-    font-size: 16px;
-    max-width: 500px;
-  }
-  .breadcrumb-item + .breadcrumb-item::before {
-    font-size: 18px;
-    margin-right: 10px;
-  }
-
-  .breadcrumb {
-    margin: 0;
-    display: flex;
-    gap: 30px;
-  }
-}
-
 @media (min-width: 1024px) {
   .breadcrumb-container {
+    background-color: #f9f1e7;
     padding: 40px;
   }
   .breadcrumb-item {
@@ -158,7 +133,9 @@ onMounted(() => {
     font-size: 18px;
     margin-right: 10px;
   }
-
+  /* .breadcrumb-container {
+    padding-inline: 50px;
+  } */
   .breadcrumb {
     margin: 0;
     display: flex;
