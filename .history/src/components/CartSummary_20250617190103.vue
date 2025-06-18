@@ -206,8 +206,7 @@ function checkout() {
     max-width: 250px;
   }
 } */
-
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .cart-wrapper {
     flex-direction: row;
     gap: unset;
@@ -216,5 +215,5 @@ function checkout() {
   .table-scroll {
     overflow-x: unset;
   }
-} */
+}
 </style>

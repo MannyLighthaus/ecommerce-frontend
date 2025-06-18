@@ -180,14 +180,10 @@ function checkout() {
 .cart-table thead {
   color: blue;
 }
-
-/* Desktop side-by-side layout */
-/* @media (min-width: 768px) {
+@media (min-width: 1024px) {
   .cart-wrapper {
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: unset;
   }
 
   .table-scroll {
@@ -199,22 +195,12 @@ function checkout() {
     padding: 24px;
     height: fit-content;
     max-width: 350px;
-    width: 100%;
   }
 
   .product-info {
     max-width: 250px;
   }
-} */
-
-/* @media (min-width: 768px) {
-  .cart-wrapper {
-    flex-direction: row;
-    gap: unset;
-    padding: 10px;
-  }
-  .table-scroll {
-    overflow-x: unset;
-  }
-} */
+}
+/* Desktop side-by-side layout */
+/*  */
 </style>

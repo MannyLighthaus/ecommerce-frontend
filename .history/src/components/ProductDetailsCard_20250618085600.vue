@@ -58,7 +58,7 @@ function decreaseQuantity() {
 <template>
   <SimpleToast ref="toastRef" />
   <div class="product-details-card">
-    <BRow class="mt-4 g-3 px-md-2">
+    <BRow class="mt-4 g-3 md-px-5">
       <BCol md="6">
         <div class="image-container">
           <BCardImg class="card-img" :src="product.image" alt="Product" />

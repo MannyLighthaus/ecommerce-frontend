@@ -206,15 +206,12 @@ function checkout() {
     max-width: 250px;
   }
 } */
-
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .cart-wrapper {
+    display: flex;
     flex-direction: row;
     gap: unset;
-    padding: 10px;
+    padding: 0;
   }
-  .table-scroll {
-    overflow-x: unset;
-  }
-} */
+}
 </style>

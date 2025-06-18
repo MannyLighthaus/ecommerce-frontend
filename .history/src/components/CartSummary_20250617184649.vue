@@ -182,39 +182,28 @@ function checkout() {
 }
 
 /* Desktop side-by-side layout */
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .cart-wrapper {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    gap: unset;
   }
 
   .table-scroll {
     overflow-x: unset;
+    width: 50%;
   }
 
   .total-card {
     background-color: #f9f1e7;
     padding: 24px;
     height: fit-content;
-    max-width: 350px;
+    max-width: 350px; /* <- this keeps the summary from stretching too wide */
     width: 100%;
   }
 
   .product-info {
     max-width: 250px;
   }
-} */
-
-/* @media (min-width: 768px) {
-  .cart-wrapper {
-    flex-direction: row;
-    gap: unset;
-    padding: 10px;
-  }
-  .table-scroll {
-    overflow-x: unset;
-  }
-} */
+}
 </style>
