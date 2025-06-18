@@ -50,11 +50,11 @@ function checkout() {
                 :id="`qty-${item.id}`"
                 v-model.number="item.quantity"
                 min="1"
-                max="10"
+                max="200"
                 class="qty-text"
                 @input="
                   () => {
-                    if (item.quantity > 10) item.quantity = 10
+                    if (item.quantity > 200) item.quantity = 200
                     else if (item.quantity < 1) item.quantity = 1
                   }
                 "

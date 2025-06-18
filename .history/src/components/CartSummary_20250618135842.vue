@@ -54,7 +54,7 @@ function checkout() {
                 class="qty-text"
                 @input="
                   () => {
-                    if (item.quantity > 10) item.quantity = 10
+                    if (item.quantity > 200) item.quantity = 100
                     else if (item.quantity < 1) item.quantity = 1
                   }
                 "

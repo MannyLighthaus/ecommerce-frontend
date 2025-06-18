@@ -45,20 +45,7 @@ function checkout() {
             </td>
             <td>₦ {{ item.price.toLocaleString() }}</td>
             <td>
-              <input
-                type="number"
-                :id="`qty-${item.id}`"
-                v-model.number="item.quantity"
-                min="1"
-                max="10"
-                class="qty-text"
-                @input="
-                  () => {
-                    if (item.quantity > 10) item.quantity = 10
-                    else if (item.quantity < 1) item.quantity = 1
-                  }
-                "
-              />
+              <input type="number" v-model="item.quantity" min="1" max="10" class="qty-text" />
             </td>
             <td>₦ {{ (item.price * item.quantity).toLocaleString() }}</td>
 
@@ -195,7 +182,7 @@ function checkout() {
 }
 
 /* Desktop side-by-side layout */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .cart-wrapper {
     flex-direction: row;
     align-items: flex-start;
@@ -219,4 +206,15 @@ function checkout() {
     max-width: 250px;
   }
 }
+
+/* @media (min-width: 768px) {
+  .cart-wrapper {
+    flex-direction: row;
+    gap: unset;
+    padding: 10px;
+  }
+  .table-scroll {
+    overflow-x: unset;
+  }
+} */
 </style>

@@ -45,20 +45,7 @@ function checkout() {
             </td>
             <td>₦ {{ item.price.toLocaleString() }}</td>
             <td>
-              <input
-                type="number"
-                :id="`qty-${item.id}`"
-                v-model.number="item.quantity"
-                min="1"
-                max="10"
-                class="qty-text"
-                @input="
-                  () => {
-                    if (item.quantity > 10) item.quantity = 10
-                    else if (item.quantity < 1) item.quantity = 1
-                  }
-                "
-              />
+              <input type="number" v-model="item.quantity" min="1" max="10" class="qty-text" />
             </td>
             <td>₦ {{ (item.price * item.quantity).toLocaleString() }}</td>
 
