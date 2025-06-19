@@ -4,6 +4,7 @@ import ServiceSection from '@/components/ServiceSection.vue'
 import FooterSection from '@/components/FooterSection.vue'
 import { onMounted } from 'vue'
 import { useProductStore } from '@/stores/product'
+import { BContainer } from 'bootstrap-vue-next'
 
 // import the pinia store for product data management
 const store = useProductStore()
@@ -19,6 +20,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <BContainer>
   <div class="shop-header">
     <img src="@/assets/shop.jpg" alt="" class="img-fluid shop-image" />
     <h2 class="shop-text">Shop</h2>
@@ -30,7 +32,7 @@ onMounted(() => {
       </ol>
     </nav>
   </div>
-
+  <!-- </BContainer> -->
   <ProductList />
   <ServiceSection />
   <FooterSection />

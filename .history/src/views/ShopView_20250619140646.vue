@@ -4,6 +4,7 @@ import ServiceSection from '@/components/ServiceSection.vue'
 import FooterSection from '@/components/FooterSection.vue'
 import { onMounted } from 'vue'
 import { useProductStore } from '@/stores/product'
+import { BContainer } from 'bootstrap-vue-next'
 
 // import the pinia store for product data management
 const store = useProductStore()
