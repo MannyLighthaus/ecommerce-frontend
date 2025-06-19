@@ -1,24 +1,41 @@
 <script setup>
-import CartSummary from '@/components/CartSummary.vue'
+import ProductList from '@/components/ProductList.vue'
+import ServiceSection from '@/components/ServiceSection.vue'
 import FooterSection from '@/components/FooterSection.vue'
+import { onMounted } from 'vue'
+import { useProductStore } from '@/stores/product'
 import { BContainer } from 'bootstrap-vue-next'
+
+// import the pinia store for product data management
+const store = useProductStore()
+
+// Use the onMounted lifecycle hook from Vue to run code when the component is mounted
+onMounted(() => {
+  // Check if the products array in the Pinia store is empty (no products loaded yet)
+  if (!store.products.length) {
+    // If empty, call the fetchProducts function to retrieve products from the Fake Store API
+    store.fetchProducts()
+  }
+})
 </script>
 
 <template>
-  <BContainer fluid class="p-0">
+  <BContainer>
     <div class="shop-header">
       <img src="@/assets/shop.jpg" alt="" class="img-fluid shop-image" />
-      <h2 class="shop-text">Cart</h2>
+      <h2 class="shop-text">Shop</h2>
 
       <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
-          <li class="breadcrumb-item active" aria-current="page">Cart</li>
+          <li class="breadcrumb-item active" aria-current="page">Shop</li>
         </ol>
       </nav>
     </div>
   </BContainer>
-  <CartSummary />
+
+  <ProductList />
+  <ServiceSection />
   <FooterSection />
 </template>
 

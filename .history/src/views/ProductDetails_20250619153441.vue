@@ -18,7 +18,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <BContainer class="p-0">
+  <BContainer fluid class="p-0">
     <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb" class="breadcrumb-container">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
@@ -107,7 +107,7 @@ onMounted(() => {
     padding: 40px;
     display: flex;
     align-items: center;
-    justify-content:;
+    justify-content: center;
   }
   .breadcrumb-item {
     a {

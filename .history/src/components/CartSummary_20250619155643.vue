@@ -23,7 +23,7 @@ function checkout() {
 </script>
 
 <template>
-  <BContainer>
+  <BContainer class="p-0">
     <div class="cart-wrapper">
       <!-- Scrollable Table -->
       <div class="table-scroll">

@@ -18,7 +18,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <BContainer class="p-0">
+  <BContainer class="">
     <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb" class="breadcrumb-container">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>

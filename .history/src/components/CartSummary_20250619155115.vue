@@ -23,76 +23,74 @@ function checkout() {
 </script>
 
 <template>
-  <BContainer>
-    <div class="cart-wrapper">
-      <!-- Scrollable Table -->
-      <div class="table-scroll">
-        <table class="cart-table table table-borderless">
-          <thead>
-            <tr>
-              <th>Product</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Subtotal</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in cart.cartItems" :key="item.id">
-              <td @click="goToProduct(item.id)" style="cursor: pointer">
-                <div class="product-info">
-                  <img :src="item.image" alt="product" />
-                  <span>{{ item.title }}</span>
-                </div>
-              </td>
-              <td>₦ {{ item.price.toLocaleString() }}</td>
-              <td>
-                <input
-                  type="number"
-                  :id="`qty-${item.id}`"
-                  v-model.number="item.quantity"
-                  min="1"
-                  max="10"
-                  class="qty-text"
-                  @input="
-                    () => {
-                      if (item.quantity > 10) item.quantity = 10
-                      else if (item.quantity < 1) item.quantity = 1
-                    }
-                  "
-                />
-              </td>
-              <td>₦ {{ (item.price * item.quantity).toLocaleString() }}</td>
+  <div class="cart-wrapper">
+    <!-- Scrollable Table -->
+    <div class="table-scroll">
+      <table class="cart-table table table-borderless">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in cart.cartItems" :key="item.id">
+            <td @click="goToProduct(item.id)" style="cursor: pointer">
+              <div class="product-info">
+                <img :src="item.image" alt="product" />
+                <span>{{ item.title }}</span>
+              </div>
+            </td>
+            <td>₦ {{ item.price.toLocaleString() }}</td>
+            <td>
+              <input
+                type="number"
+                :id="`qty-${item.id}`"
+                v-model.number="item.quantity"
+                min="1"
+                max="10"
+                class="qty-text"
+                @input="
+                  () => {
+                    if (item.quantity > 10) item.quantity = 10
+                    else if (item.quantity < 1) item.quantity = 1
+                  }
+                "
+              />
+            </td>
+            <td>₦ {{ (item.price * item.quantity).toLocaleString() }}</td>
 
-              <td>
-                <i
-                  class="bi bi-trash3-fill"
-                  @click="removeItem(item.id)"
-                  style="color: #b88e2f; font-size: 1.3rem; cursor: pointer"
-                ></i>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Cart Totals -->
-      <div class="total-card">
-        <div class="total-content">
-          <h3>Cart Totals</h3>
-          <div class="content-one">
-            <p>Subtotal</p>
-            <p>₦ {{ cart.subtotal.toLocaleString() }}</p>
-          </div>
-          <div class="content-one">
-            <p>Total</p>
-            <p class="total-price">₦ {{ cart.subtotal.toLocaleString() }}</p>
-          </div>
-        </div>
-        <BButton class="checkout-btn" @click="checkout">Check Out</BButton>
-      </div>
+            <td>
+              <i
+                class="bi bi-trash3-fill"
+                @click="removeItem(item.id)"
+                style="color: #b88e2f; font-size: 1.3rem; cursor: pointer"
+              ></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </BContainer>
+
+    <!-- Cart Totals -->
+    <div class="total-card">
+      <div class="total-content">
+        <h3>Cart Totals</h3>
+        <div class="content-one">
+          <p>Subtotal</p>
+          <p>₦ {{ cart.subtotal.toLocaleString() }}</p>
+        </div>
+        <div class="content-one">
+          <p>Total</p>
+          <p class="total-price">₦ {{ cart.subtotal.toLocaleString() }}</p>
+        </div>
+      </div>
+      <BButton class="checkout-btn" @click="checkout">Check Out</BButton>
+    </div>
+  </div>
 </template>
 
 <style scoped>
