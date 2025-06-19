@@ -25,10 +25,10 @@ const services = [
 </template>
 
 <style scoped>
-.service-container {
+/* .service-container {
   background-color: #fff3e3;
   margin-block-start: 40px;
-}
+} */
 
 .service-icon {
   font-size: 36px;

@@ -160,7 +160,6 @@ const cartCount = computed(() => cartStore.cartItems.length)
 @media (min-width: 768px) {
   .nav-container {
     display: flex;
-    align-items: center;
   }
   .nav-icons {
     display: none;

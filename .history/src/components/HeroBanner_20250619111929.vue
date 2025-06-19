@@ -3,28 +3,26 @@ import { BCard, BCardText, BButton, BContainer } from 'bootstrap-vue-next'
 </script>
 
 <template>
-  <BContainer>
-    <section class="hero-section">
-      <img src="@/assets/hero-image.png" alt="Hero" class="img-fluid hero-image" />
+  <section class="hero-section">
+    <img src="@/assets/hero-image.png" alt="Hero" class="img-fluid hero-image" />
 
-      <BCard class="hero-card">
-        <BCardText class="card-text">
-          <p class="arrival-text">New Arrival</p>
-          <p class="collection-text">
-            Discover Our <br />
-            New Collection
-          </p>
-          <p class="lorem-text">
-            Step into the season with style. Explore our newest arrivals — where modern design meets
-            timeless elegance. Curated for comfort, crafted for you.
-          </p>
-        </BCardText>
+    <BCard class="hero-card">
+      <BCardText class="card-text">
+        <p class="arrival-text">New Arrival</p>
+        <p class="collection-text">
+          Discover Our <br />
+          New Collection
+        </p>
+        <p class="lorem-text">
+          Step into the season with style. Explore our newest arrivals — where modern design meets
+          timeless elegance. Curated for comfort, crafted for you.
+        </p>
+      </BCardText>
 
-        <!-- button -->
-        <BButton tag="router-link" to="/Shop" class="button"> Buy Now </BButton>
-      </BCard>
-    </section>
-  </BContainer>
+      <!-- button -->
+      <BButton tag="router-link" to="/Shop" class="button"> Buy Now </BButton>
+    </BCard>
+  </section>
 </template>
 
 <style scoped>

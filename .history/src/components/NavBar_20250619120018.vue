@@ -21,7 +21,7 @@ const cartCount = computed(() => cartStore.cartItems.length)
 
 <template>
   <BNavbar toggleable="md " class="app-nav-bar py-3">
-    <BContainer class="nav-container">
+    <BContainer fluid class="p-0">
       <!-- Top row: Toggle, Brand Logo/name , Icons (all inline) -->
       <div class="d-flex">
         <!-- Left: Toggle + Brand -->
@@ -158,10 +158,6 @@ const cartCount = computed(() => cartStore.cartItems.length)
 /* larger screen size */
 
 @media (min-width: 768px) {
-  .nav-container {
-    display: flex;
-    align-items: center;
-  }
   .nav-icons {
     display: none;
   }
@@ -182,6 +178,12 @@ const cartCount = computed(() => cartStore.cartItems.length)
 
   .cart-icon-wrapper:hover .bi-cart {
     color: rgba(220, 170, 60, 1);
+  }
+  .nav-icons,
+  .nav-icons-md {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 }
 </style>

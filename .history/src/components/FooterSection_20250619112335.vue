@@ -2,52 +2,50 @@
 import { BContainer } from 'bootstrap-vue-next'
 </script>
 <template>
-  <BContainer>
-    <div class="footer-container">
-      <div class="footer-section">
-        <!-- brand and address -->
-        <div class="brand-address-container">
-          <h2>Furniro.</h2>
-          <p class="address">400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
-        </div>
+  <div class="footer-container">
+    <div class="footer-section">
+      <!-- brand and address -->
+      <div class="brand-address-container">
+        <h2>Furniro.</h2>
+        <p class="address">400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
+      </div>
 
-        <!-- links -->
-        <div class="nav-link-container">
-          <h5 class="link-header">Links</h5>
-          <div class="nav-links">
-            <router-link to="/" class="nav-link">Home</router-link>
-            <router-link to="/shop" class="nav-link">Shop</router-link>
-            <router-link to="/about" class="nav-link">About</router-link>
-            <router-link to="/contact" class="nav-link">Contact</router-link>
-          </div>
-        </div>
-
-        <!-- help -->
-        <div class="nav-link-container">
-          <h5 class="link-header">Help</h5>
-
-          <div class="nav-links">
-            <router-link to="/" class="nav-link">Payment options</router-link>
-            <router-link to="/shop" class="nav-link">Returns</router-link>
-            <router-link to="/about" class="nav-link">Privacy policies</router-link>
-          </div>
-        </div>
-
-        <!-- newsletter -->
-        <div>
-          <h5 class="link-header">Newsletter</h5>
-          <div class="newsletter-input-container">
-            <input type="email" placeholder="Enter your email" class="newsletter-input" />
-            <p style="text-decoration: underline">Subscribe</p>
-          </div>
+      <!-- links -->
+      <div class="nav-link-container">
+        <h5 class="link-header">Links</h5>
+        <div class="nav-links">
+          <router-link to="/" class="nav-link">Home</router-link>
+          <router-link to="/shop" class="nav-link">Shop</router-link>
+          <router-link to="/about" class="nav-link">About</router-link>
+          <router-link to="/contact" class="nav-link">Contact</router-link>
         </div>
       </div>
-      <div class="copyright">
-        <hr />
-        <p>2025 Furniro. All rights reserved.</p>
+
+      <!-- help -->
+      <div class="nav-link-container">
+        <h5 class="link-header">Help</h5>
+
+        <div class="nav-links">
+          <router-link to="/" class="nav-link">Payment options</router-link>
+          <router-link to="/shop" class="nav-link">Returns</router-link>
+          <router-link to="/about" class="nav-link">Privacy policies</router-link>
+        </div>
+      </div>
+
+      <!-- newsletter -->
+      <div>
+        <h5 class="link-header">Newsletter</h5>
+        <div class="newsletter-input-container">
+          <input type="email" placeholder="Enter your email" class="newsletter-input" />
+          <p style="text-decoration: underline">Subscribe</p>
+        </div>
       </div>
     </div>
-  </BContainer>
+    <div class="copyright">
+      <hr />
+      <p>2025 Furniro. All rights reserved.</p>
+    </div>
+  </div>
 </template>
 
 <style scoped>

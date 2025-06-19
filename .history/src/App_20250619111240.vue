@@ -1,9 +1,11 @@
 <script setup>
 import NavBar from './components/NavBar.vue'
+import ffff from '@/components/fffff.vue'
 </script>
 
 <template>
   <NavBar />
+  <ffff />
 
   <RouterView />
 </template>

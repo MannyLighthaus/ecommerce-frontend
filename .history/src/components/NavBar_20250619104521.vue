@@ -20,13 +20,14 @@ const cartCount = computed(() => cartStore.cartItems.length)
 </script>
 
 <template>
-  <BNavbar toggleable="md " class="app-nav-bar py-3">
-    <BContainer class="nav-container">
+  <BNavbar toggleable="md p-0 my-3" class="app-nav-bar">
+    <BContainer>
       <!-- Top row: Toggle, Brand Logo/name , Icons (all inline) -->
       <div class="d-flex">
         <!-- Left: Toggle + Brand -->
-        <div class="toggle-brand">
+        <div>
           <BNavbarToggle target="nav-collapse" />
+
           <BNavbarBrand>
             <router-link to="/" class="brand-logo-link">
               <img src="@/assets/logo.png" alt="logo" width="30" />
@@ -34,17 +35,17 @@ const cartCount = computed(() => cartStore.cartItems.length)
             </router-link>
           </BNavbarBrand>
         </div>
+      </div>
 
-        <!-- Right: Icons (mobile view) -->
-        <div class="nav-icons">
-          <i class="bi bi-person-exclamation"></i>
-          <i class="bi bi-search"></i>
-          <router-link to="/cart" class="cart-icon-wrapper">
-            <i class="bi bi-cart"></i>
-            <!-- only show if greater than 0 -->
-            <span class="cart-count-badge" v-if="cartCount > 0">{{ cartCount }}</span>
-          </router-link>
-        </div>
+      <!-- icons -->
+      <div class="nav-icons">
+        <i class="bi bi-person-exclamation"></i>
+        <i class="bi bi-search"></i>
+        <router-link to="/cart" class="cart-icon-wrapper">
+          <i class="bi bi-cart"></i>
+          <!-- only show if greater than 0 -->
+          <span class="cart-count-badge" v-if="cartCount > 0">{{ cartCount }}</span>
+        </router-link>
       </div>
 
       <!-- nav-links -->
@@ -65,7 +66,7 @@ const cartCount = computed(() => cartStore.cartItems.length)
         </BNavbarNav>
       </BCollapse>
 
-      <!-- icons for desktop-->
+      <!-- icons for larger screens-->
       <div class="nav-icons-md">
         <i class="bi bi-person-exclamation"></i>
         <i class="bi bi-search"></i>
@@ -84,11 +85,6 @@ const cartCount = computed(() => cartStore.cartItems.length)
 </template>
 
 <style scoped>
-.toggle-brand {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-}
 .brand-logo-link {
   display: flex;
   align-items: center;
@@ -158,10 +154,6 @@ const cartCount = computed(() => cartStore.cartItems.length)
 /* larger screen size */
 
 @media (min-width: 768px) {
-  .nav-container {
-    display: flex;
-    align-items: center;
-  }
   .nav-icons {
     display: none;
   }

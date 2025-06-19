@@ -20,8 +20,8 @@ const cartCount = computed(() => cartStore.cartItems.length)
 </script>
 
 <template>
-  <BNavbar toggleable="md " class="app-nav-bar py-3">
-    <BContainer class="nav-container">
+  <BNavbar toggleable="md p-0 my-3" class="app-nav-bar">
+    <BContainer>
       <!-- Top row: Toggle, Brand Logo/name , Icons (all inline) -->
       <div class="d-flex">
         <!-- Left: Toggle + Brand -->
@@ -49,7 +49,7 @@ const cartCount = computed(() => cartStore.cartItems.length)
 
       <!-- nav-links -->
       <BCollapse id="nav-collapse" is-nav class="mobile-overlay-collapse">
-        <BNavbarNav class="justify-content-center w-100">
+        <!-- <BNavbarNav class="justify-content-center w-100"> -->
           <BNavItem>
             <router-link to="/" class="nav-link">Home</router-link>
           </BNavItem>
@@ -158,17 +158,13 @@ const cartCount = computed(() => cartStore.cartItems.length)
 /* larger screen size */
 
 @media (min-width: 768px) {
-  .nav-container {
-    display: flex;
-    align-items: center;
-  }
-  .nav-icons {
+  /* .nav-icons {
     display: none;
   }
   .nav-icons-md {
     display: flex;
     gap: 20px;
-  }
+  } */
 
   nav-icons-md i {
     font-size: 22px;

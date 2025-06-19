@@ -20,31 +20,28 @@ const cartCount = computed(() => cartStore.cartItems.length)
 </script>
 
 <template>
-  <BNavbar toggleable="md " class="app-nav-bar py-3">
-    <BContainer class="nav-container">
-      <!-- Top row: Toggle, Brand Logo/name , Icons (all inline) -->
-      <div class="d-flex">
-        <!-- Left: Toggle + Brand -->
-        <div class="toggle-brand">
-          <BNavbarToggle target="nav-collapse" />
-          <BNavbarBrand>
-            <router-link to="/" class="brand-logo-link">
-              <img src="@/assets/logo.png" alt="logo" width="30" />
-              <span> Furniro</span>
-            </router-link>
-          </BNavbarBrand>
-        </div>
-
-        <!-- Right: Icons (mobile view) -->
-        <div class="nav-icons">
-          <i class="bi bi-person-exclamation"></i>
-          <i class="bi bi-search"></i>
-          <router-link to="/cart" class="cart-icon-wrapper">
-            <i class="bi bi-cart"></i>
-            <!-- only show if greater than 0 -->
-            <span class="cart-count-badge" v-if="cartCount > 0">{{ cartCount }}</span>
+  <BNavbar toggleable="md p-0 my-3" class="app-nav-bar">
+    <BContainer>
+      <div class="toggle-brand-container">
+        <BNavbarToggle target="nav-collapse" />
+        <!-- logo/brand -->
+        <BNavbarBrand>
+          <router-link to="/" class="brand-logo-link">
+            <img src="@/assets/logo.png" alt="logo" width="30" />
+            <span> Furniro</span>
           </router-link>
-        </div>
+        </BNavbarBrand>
+      </div>
+
+      <!-- icons -->
+      <div class="nav-icons">
+        <i class="bi bi-person-exclamation"></i>
+        <i class="bi bi-search"></i>
+        <router-link to="/cart" class="cart-icon-wrapper">
+          <i class="bi bi-cart"></i>
+          <!-- only show if greater than 0 -->
+          <span class="cart-count-badge" v-if="cartCount > 0">{{ cartCount }}</span>
+        </router-link>
       </div>
 
       <!-- nav-links -->
@@ -65,7 +62,7 @@ const cartCount = computed(() => cartStore.cartItems.length)
         </BNavbarNav>
       </BCollapse>
 
-      <!-- icons for desktop-->
+      <!-- icons for larger screens-->
       <div class="nav-icons-md">
         <i class="bi bi-person-exclamation"></i>
         <i class="bi bi-search"></i>
@@ -84,10 +81,10 @@ const cartCount = computed(() => cartStore.cartItems.length)
 </template>
 
 <style scoped>
-.toggle-brand {
+.toggle-brand-container {
   display: flex;
-  gap: 10px;
-  width: 100%;
+
+  gap: 12px;
 }
 .brand-logo-link {
   display: flex;
@@ -96,6 +93,15 @@ const cartCount = computed(() => cartStore.cartItems.length)
   color: black;
   font-weight: bold;
   gap: 6px;
+}
+
+/* hamburger and brandname/logo side by side  */
+.app-nav-bar {
+  .container-fluid {
+    justify-content: space-between;
+    padding-inline: 20px;
+    padding-block: 24px;
+  }
 }
 
 .nav-icons {
@@ -158,10 +164,6 @@ const cartCount = computed(() => cartStore.cartItems.length)
 /* larger screen size */
 
 @media (min-width: 768px) {
-  .nav-container {
-    display: flex;
-    align-items: center;
-  }
   .nav-icons {
     display: none;
   }

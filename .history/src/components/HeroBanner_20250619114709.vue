@@ -3,7 +3,7 @@ import { BCard, BCardText, BButton, BContainer } from 'bootstrap-vue-next'
 </script>
 
 <template>
-  <BContainer>
+  <BContainer fluid class="p-0">
     <section class="hero-section">
       <img src="@/assets/hero-image.png" alt="Hero" class="img-fluid hero-image" />
 

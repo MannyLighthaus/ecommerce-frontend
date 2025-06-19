@@ -20,64 +20,55 @@ const cartCount = computed(() => cartStore.cartItems.length)
 </script>
 
 <template>
-  <BNavbar toggleable="md " class="app-nav-bar py-3">
-    <BContainer class="nav-container">
-      <!-- Top row: Toggle, Brand Logo/name , Icons (all inline) -->
-      <div class="d-flex">
-        <!-- Left: Toggle + Brand -->
-        <div class="toggle-brand">
-          <BNavbarToggle target="nav-collapse" />
+  <BNavbar toggleable="md" class="app-nav-bar py-3">
+    <BContainer fluid class="p-0">
+      <!-- Top Section -->
+      <div class="row align-items-center w-100 gx-0">
+        <!-- Left: Logo + Toggle -->
+        <div class="col-6 col-md-4 d-flex align-items-center gap-3 ps-3">
+          <BNavbarToggle target="nav-collapse" class="d-md-none" />
           <BNavbarBrand>
             <router-link to="/" class="brand-logo-link">
               <img src="@/assets/logo.png" alt="logo" width="30" />
-              <span> Furniro</span>
+              <span>Furniro</span>
             </router-link>
           </BNavbarBrand>
         </div>
 
-        <!-- Right: Icons (mobile view) -->
-        <div class="nav-icons">
-          <i class="bi bi-person-exclamation"></i>
-          <i class="bi bi-search"></i>
-          <router-link to="/cart" class="cart-icon-wrapper">
-            <i class="bi bi-cart"></i>
-            <!-- only show if greater than 0 -->
-            <span class="cart-count-badge" v-if="cartCount > 0">{{ cartCount }}</span>
-          </router-link>
+        <!-- Center: Nav Links -->
+        <div class="col-12 col-md-4 mt-3 mt-md-0">
+          <BCollapse id="nav-collapse" is-nav>
+            <BNavbarNav class="justify-content-center gap-md-4">
+              <BNavItem><router-link to="/" class="nav-link">Home</router-link></BNavItem>
+              <BNavItem><router-link to="/shop" class="nav-link">Shop</router-link></BNavItem>
+              <BNavItem><router-link to="/about" class="nav-link">About</router-link></BNavItem>
+              <BNavItem><router-link to="/contact" class="nav-link">Contact</router-link></BNavItem>
+            </BNavbarNav>
+          </BCollapse>
         </div>
-      </div>
 
-      <!-- nav-links -->
-      <BCollapse id="nav-collapse" is-nav class="mobile-overlay-collapse">
-        <BNavbarNav class="justify-content-center w-100">
-          <BNavItem>
-            <router-link to="/" class="nav-link">Home</router-link>
-          </BNavItem>
-          <BNavItem>
-            <router-link to="/shop" class="nav-link">Shop</router-link>
-          </BNavItem>
-          <BNavItem>
-            <router-link to="/about" class="nav-link">About</router-link>
-          </BNavItem>
-          <BNavItem>
-            <router-link to="/contact" class="nav-link">Contact</router-link>
-          </BNavItem>
-        </BNavbarNav>
-      </BCollapse>
-
-      <!-- icons for desktop-->
-      <div class="nav-icons-md">
-        <i class="bi bi-person-exclamation"></i>
-        <i class="bi bi-search"></i>
-        <i class="bi bi-heart"></i>
-        <router-link to="/cart" class="cart-icon-wrapper">
-          <i class="bi bi-cart"></i>
-
-          <!-- only show if greater than 0, :key retriggers the animation by re-rendering the badge each time the number changes -->
-          <span class="cart-count-badge" v-if="cartCount > 0" :key="cartCount">{{
-            cartCount
-          }}</span>
-        </router-link>
+        <!-- Right: Icons -->
+        <div class="col-6 col-md-4 d-flex justify-content-end align-items-center gap-3 pe-3">
+          <div class="d-flex gap-3 d-md-none nav-icons">
+            <i class="bi bi-person-exclamation"></i>
+            <i class="bi bi-search"></i>
+            <router-link to="/cart" class="cart-icon-wrapper">
+              <i class="bi bi-cart"></i>
+              <span class="cart-count-badge" v-if="cartCount > 0">{{ cartCount }}</span>
+            </router-link>
+          </div>
+          <div class="d-none d-md-flex gap-3 nav-icons-md">
+            <i class="bi bi-person-exclamation"></i>
+            <i class="bi bi-search"></i>
+            <i class="bi bi-heart"></i>
+            <router-link to="/cart" class="cart-icon-wrapper">
+              <i class="bi bi-cart"></i>
+              <span class="cart-count-badge" v-if="cartCount > 0" :key="cartCount">{{
+                cartCount
+              }}</span>
+            </router-link>
+          </div>
+        </div>
       </div>
     </BContainer>
   </BNavbar>
@@ -158,10 +149,6 @@ const cartCount = computed(() => cartStore.cartItems.length)
 /* larger screen size */
 
 @media (min-width: 768px) {
-  .nav-container {
-    display: flex;
-    align-items: center;
-  }
   .nav-icons {
     display: none;
   }
