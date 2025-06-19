@@ -107,8 +107,5 @@ onMounted(async () => {
   .success-page {
     margin-top: 10%;
   }
-  .loading-container {
-    min-height: 10vh;
-  }
 }
 </style>

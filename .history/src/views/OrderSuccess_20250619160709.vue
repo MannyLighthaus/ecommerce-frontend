@@ -105,10 +105,8 @@ onMounted(async () => {
 
 @media (min-width: 768px) {
   .success-page {
+    text-align: center;
     margin-top: 10%;
-  }
-  .loading-container {
-    min-height: 10vh;
   }
 }
 </style>
