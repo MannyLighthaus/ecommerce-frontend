@@ -128,7 +128,7 @@ import { BCard, BCardText, BButton, BContainer } from 'bootstrap-vue-next'
     top: 50%;
     left: 70%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    width: 10%;
   }
   .arrival-text {
     font-size: 14px;

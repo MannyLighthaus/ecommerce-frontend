@@ -103,12 +103,11 @@ import { BCard, BCardText, BButton, BContainer } from 'bootstrap-vue-next'
 
 .hero-card {
   position: absolute;
-  top: 100px;
+  top: 50px;
   left: 20px;
   right: 20px;
   background-color: rgba(255, 243, 227, 1);
   padding: 8px;
-  max-width: 500px;
 }
 
 @media (min-width: 768px) {

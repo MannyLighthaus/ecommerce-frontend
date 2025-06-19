@@ -3,31 +3,28 @@ import { BCard, BCardText, BButton, BContainer } from 'bootstrap-vue-next'
 </script>
 
 <template>
-  <!-- Full width container for hero banner -->
-  <BContainer fluid class="p-0">
-    <section class="hero-section">
-      <img src="@/assets/hero-image.png" alt="Hero" class="img-fluid hero-image" />
+  <section class="hero-section">
+    <img src="@/assets/hero-image.png" alt="Hero" class="img-fluid hero-image" />
 
-      <BContainer>
-        <BCard class="hero-card">
-          <BCardText class="card-text">
-            <p class="arrival-text">New Arrival</p>
-            <p class="collection-text">
-              Discover Our <br />
-              New Collection
-            </p>
-            <p class="lorem-text">
-              Step into the season with style. Explore our newest arrivals — where modern design
-              meets timeless elegance. Curated for comfort, crafted for you.
-            </p>
-          </BCardText>
+    <BContainer>
+      <BCard class="hero-card">
+        <BCardText class="card-text">
+          <p class="arrival-text">New Arrival</p>
+          <p class="collection-text">
+            Discover Our <br />
+            New Collection
+          </p>
+          <p class="lorem-text">
+            Step into the season with style. Explore our newest arrivals — where modern design meets
+            timeless elegance. Curated for comfort, crafted for you.
+          </p>
+        </BCardText>
 
-          <!-- button -->
-          <BButton tag="router-link" to="/Shop" class="button"> Buy Now </BButton>
-        </BCard>
-      </BContainer>
-    </section>
-  </BContainer>
+        <!-- button -->
+        <BButton tag="router-link" to="/Shop" class="button"> Buy Now </BButton>
+      </BCard>
+    </BContainer>
+  </section>
 </template>
 
 <style scoped>
@@ -101,15 +98,14 @@ import { BCard, BCardText, BButton, BContainer } from 'bootstrap-vue-next'
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* reduce shadow */
 }
 
-.hero-card {
+/* .hero-card {
   position: absolute;
-  top: 100px;
+  top: 50px;
   left: 20px;
   right: 20px;
   background-color: rgba(255, 243, 227, 1);
   padding: 8px;
-  max-width: 500px;
-}
+} */
 
 @media (min-width: 768px) {
   .hero-section {

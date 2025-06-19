@@ -103,7 +103,7 @@ import { BCard, BCardText, BButton, BContainer } from 'bootstrap-vue-next'
 
 .hero-card {
   position: absolute;
-  top: 100px;
+  top: 50px;
   left: 20px;
   right: 20px;
   background-color: rgba(255, 243, 227, 1);
@@ -128,7 +128,7 @@ import { BCard, BCardText, BButton, BContainer } from 'bootstrap-vue-next'
     top: 50%;
     left: 70%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    width: 90%;
   }
   .arrival-text {
     font-size: 14px;
