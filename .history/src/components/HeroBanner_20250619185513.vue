@@ -38,7 +38,7 @@ import { BContainer, BRow, BCol, BCard, BCardText, BButton } from 'bootstrap-vue
   display: flex;
   align-items: center;
 }
-
+:
 .hero-card {
   background-color: #fff3e3;
   padding: 16px;

@@ -27,7 +27,7 @@ import { BContainer, BRow, BCol, BCard, BCardText, BButton } from 'bootstrap-vue
   </section>
 </template>
 
-<style scoped>
+<style>
 .hero-section {
   background-image: url('@/assets/hero-image.png');
   background-size: cover;

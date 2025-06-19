@@ -5,7 +5,7 @@ import { BContainer, BRow, BCol, BCard, BCardText, BButton } from 'bootstrap-vue
 <template>
   <section class="hero-section">
     <BContainer>
-      <BRow class="justify-content-end">
+      <BRow class="justify-content-end align-items-center">
         <BCol cols="12" md="6">
           <BCard class="hero-card">
             <BCardText class="card-text">
@@ -34,15 +34,12 @@ import { BContainer, BRow, BCol, BCard, BCardText, BButton } from 'bootstrap-vue
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  padding: 80px 0;
-  display: flex;
-  align-items: center;
 }
 
 .hero-card {
   background-color: #fff3e3;
   padding: 16px;
-  border: none;
+  /* border: none; */
   max-width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }

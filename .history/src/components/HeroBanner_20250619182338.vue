@@ -4,9 +4,13 @@ import { BContainer, BRow, BCol, BCard, BCardText, BButton } from 'bootstrap-vue
 
 <template>
   <section class="hero-section">
+    <!-- Hero background image as a normal image (still takes full width) -->
+    <img src="@/assets/hero-image.png" alt="Hero" class="img-fluid hero-image" />
+
+    <!-- Overlay content inside normal container and grid -->
     <BContainer>
-      <BRow class="justify-content-end">
-        <BCol cols="12" md="6">
+      <BRow class="justify-content-start align-items-center">
+        <BCol cols="12" md="6" lg="5">
           <BCard class="hero-card">
             <BCardText class="card-text">
               <p class="arrival-text">New Arrival</p>
@@ -28,23 +32,26 @@ import { BContainer, BRow, BCol, BCard, BCardText, BButton } from 'bootstrap-vue
 </template>
 
 <style scoped>
+/* Section spacing */
 .hero-section {
-  background-image: url('@/assets/hero-image.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+  position: relative;
   padding: 80px 0;
-  display: flex;
-  align-items: center;
 }
 
+/* Hero image at the top */
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+/* Card styling */
 .hero-card {
   background-color: #fff3e3;
   padding: 16px;
   border: none;
   max-width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .arrival-text {
@@ -73,6 +80,7 @@ import { BContainer, BRow, BCol, BCard, BCardText, BButton } from 'bootstrap-vue
   gap: 3px;
 }
 
+/* Button styling */
 .button {
   color: #fff;
   background-color: #b88e2f;
@@ -95,6 +103,7 @@ import { BContainer, BRow, BCol, BCard, BCardText, BButton } from 'bootstrap-vue
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Responsive tweaks */
 @media (min-width: 768px) {
   .arrival-text {
     font-size: 14px;
