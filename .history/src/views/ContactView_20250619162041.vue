@@ -2,7 +2,7 @@
   <BContainer>
     <div class="p-4">
       <h1>About Page</h1>
-      <p>This is a placeholder for About page.</p>
+      <p>This is a placeholder about Contact Page.</p>
     </div>
   </BContainer>
 </template>
