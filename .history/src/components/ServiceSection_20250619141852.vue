@@ -62,6 +62,12 @@ const services = [
 }
 
 @media (min-width: 768px) {
+  .service-container {
+    margin: 0;
+  }
+  .container {
+    /* max-width: 100%; */
+  }
   .service-row {
     display: flex;
     flex-direction: row;

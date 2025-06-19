@@ -25,10 +25,10 @@ const services = [
 </template>
 
 <style scoped>
-.service-container {
+/* .service-container {
   background-color: #fff3e3;
   margin-block-start: 40px;
-}
+} */
 
 .service-icon {
   font-size: 36px;
@@ -62,6 +62,12 @@ const services = [
 }
 
 @media (min-width: 768px) {
+  /* .service-container {
+    margin: 0;
+  }
+  .container {
+    max-width: 100%;
+  } */
   .service-row {
     display: flex;
     flex-direction: row;
