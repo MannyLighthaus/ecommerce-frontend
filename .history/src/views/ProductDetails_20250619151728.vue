@@ -113,7 +113,7 @@ onMounted(() => {
   }
   .breadcrumb-item.active {
     font-size: 16px;
-    max-width: 450px;
+    max-width: 500px;
   }
   .breadcrumb-item + .breadcrumb-item::before {
     font-size: 18px;
@@ -128,16 +128,23 @@ onMounted(() => {
 }
 
 @media (min-width: 1024px) {
-  .breadcrumb-item.active {
+  /* .breadcrumb-item.active {
     font-size: 16px;
     white-space: normal;
     overflow: visible;
     text-overflow: unset;
     max-width: 100%;
-  }
+  } */
   /* the divider */
-  .breadcrumb {
+  /* .breadcrumb-item + .breadcrumb-item::before {
+    font-size: 18px;
+    margin-right: 10px;
+  } */
+
+  /* .breadcrumb {
+    margin: 0;
+    display: flex;
     gap: 30px;
-  }
+  } */
 }
 </style>

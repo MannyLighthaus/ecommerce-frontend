@@ -136,7 +136,14 @@ onMounted(() => {
     max-width: 100%;
   }
   /* the divider */
+  .breadcrumb-item + .breadcrumb-item::before {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
   .breadcrumb {
+    margin: 0;
+    display: flex;
     gap: 30px;
   }
 }

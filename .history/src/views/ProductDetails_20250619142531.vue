@@ -18,7 +18,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <BContainer class="p-0">
+  <BContainer class="mt-2 product-details-container">
     <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb" class="breadcrumb-container">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
@@ -28,10 +28,8 @@ onMounted(() => {
         </li>
       </ol>
     </nav>
-  </BContainer>
 
-  <!-- loading state -->
-  <BContainer>
+    <!-- loading state -->
     <div v-if="loading" class="loading-container">
       <div class="loading"></div>
     </div>
@@ -45,11 +43,18 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.product-details-container {
+  margin: 0;
+  padding: 0;
+}
+
 .breadcrumb-container {
   background-color: #f9f1e7;
   padding: 20px;
 }
-
+.breadcrumb {
+  margin: 0;
+}
 .breadcrumb-item {
   a {
     text-decoration: none;
@@ -75,6 +80,10 @@ onMounted(() => {
   font-weight: 500;
   font-size: 16px;
   float: unset;
+}
+.product-details {
+  margin-inline: 20px;
+  margin-block-end: 20%;
 }
 
 .loading-container {
@@ -113,7 +122,7 @@ onMounted(() => {
   }
   .breadcrumb-item.active {
     font-size: 16px;
-    max-width: 450px;
+    max-width: 500px;
   }
   .breadcrumb-item + .breadcrumb-item::before {
     font-size: 18px;
@@ -123,11 +132,19 @@ onMounted(() => {
   .breadcrumb {
     margin: 0;
     display: flex;
-    gap: 10px;
+    gap: 30px;
   }
 }
 
 @media (min-width: 1024px) {
+  .breadcrumb-container {
+    padding: 40px;
+  }
+  .breadcrumb-item {
+    a {
+      font-size: 16px;
+    }
+  }
   .breadcrumb-item.active {
     font-size: 16px;
     white-space: normal;
@@ -136,7 +153,14 @@ onMounted(() => {
     max-width: 100%;
   }
   /* the divider */
+  .breadcrumb-item + .breadcrumb-item::before {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
   .breadcrumb {
+    margin: 0;
+    display: flex;
     gap: 30px;
   }
 }

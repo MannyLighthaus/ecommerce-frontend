@@ -121,8 +121,6 @@ onMounted(() => {
   }
 
   .breadcrumb {
-    margin: 0;
-    display: flex;
     gap: 10px;
   }
 }

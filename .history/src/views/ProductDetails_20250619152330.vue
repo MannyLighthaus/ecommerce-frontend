@@ -136,8 +136,9 @@ onMounted(() => {
     max-width: 100%;
   }
   /* the divider */
+
   .breadcrumb {
-    gap: 30px;
+    gap: 10px;
   }
 }
 </style>
