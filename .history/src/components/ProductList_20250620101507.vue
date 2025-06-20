@@ -203,8 +203,8 @@ function goToProduct(id) {
   .btn-icon-container {
     display: none;
   }
-  .product-container {
-    margin-bottom: 8%;
-  }
+  /* .product-container {
+    margin-bottom: 10%;
+  } */
 }
 </style>

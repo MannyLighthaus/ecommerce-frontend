@@ -204,7 +204,7 @@ function goToProduct(id) {
     display: none;
   }
   .product-container {
-    margin-bottom: 8%;
+    margin-bottom: 5%;
   }
 }
 </style>
