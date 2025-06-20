@@ -43,13 +43,12 @@ import { BContainer } from 'bootstrap-vue-next'
               name="newsletter"
               placeholder="Enter your email"
               class="newsletter-input"
-              required
             />
-
-            <!-- place holder navigation -->
-            <RouterLink to="/" class="subscribe-link">
-              <p class="subscribe">Subscribe</p></RouterLink
+            <!-- place holder -->
+            <RouterLink to="/">
+              <p class="subscribe" style="text-decoration: underline">Subscribe</p></RouterLink
             >
+            <p class="subscribe" style="text-decoration: underline">Subscribe</p>
           </div>
         </div>
       </div>
@@ -127,20 +126,9 @@ hr {
   color: #9f9f9f;
 }
 
-.subscribe {
-  text-decoration: underline;
-  color: #000;
-  cursor: pointer;
-}
-
-.subscribe-link {
-  text-decoration: none;
-}
-
 .subscribe:hover {
   color: rgba(220, 170, 60, 1);
 }
-
 @media (min-width: 768px) {
   .footer-section {
     display: flex;

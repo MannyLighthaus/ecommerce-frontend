@@ -43,7 +43,6 @@ import { BContainer } from 'bootstrap-vue-next'
               name="newsletter"
               placeholder="Enter your email"
               class="newsletter-input"
-              required
             />
 
             <!-- place holder navigation -->

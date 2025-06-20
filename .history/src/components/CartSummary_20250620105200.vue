@@ -118,7 +118,7 @@ function checkout() {
   vertical-align: middle;
   max-width: 200px; /* Prevents overly wide cells */
   white-space: nowrap;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-overflow: ellipsis;
 }
 

@@ -43,7 +43,6 @@ import { BContainer } from 'bootstrap-vue-next'
               name="newsletter"
               placeholder="Enter your email"
               class="newsletter-input"
-              required
             />
 
             <!-- place holder navigation -->
@@ -129,16 +128,12 @@ hr {
 
 .subscribe {
   text-decoration: underline;
-  color: #000;
+  color: #ffffff;
   cursor: pointer;
 }
 
 .subscribe-link {
   text-decoration: none;
-}
-
-.subscribe:hover {
-  color: rgba(220, 170, 60, 1);
 }
 
 @media (min-width: 768px) {

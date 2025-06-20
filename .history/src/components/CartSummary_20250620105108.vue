@@ -117,7 +117,7 @@ function checkout() {
 .cart-table td {
   vertical-align: middle;
   max-width: 200px; /* Prevents overly wide cells */
-  white-space: nowrap;
+  /* white-space: nowrap; */
   overflow: hidden;
   text-overflow: ellipsis;
 }
