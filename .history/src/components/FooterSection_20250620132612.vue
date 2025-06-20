@@ -47,13 +47,16 @@ import { BContainer } from 'bootstrap-vue-next'
             />
 
             <!-- place holder navigation -->
+            <RouterLink to="/" class="subscribe-link">
+              <p class="subscribe">Subscribe</p>
+            </RouterLink>
             <RouterLink to="/" class="subscribe-link"> Subscribe </RouterLink>
           </div>
         </div>
       </div>
       <div class="copyright">
         <hr />
-        <p>© 2025 Furniro. All rights reserved.</p>
+        <p>2025 Furniro. All rights reserved.</p>
       </div>
     </div>
   </BContainer>
@@ -125,11 +128,17 @@ hr {
   color: #9f9f9f;
 }
 
+/* .subscribe {
+  text-decoration: underline;
+  color: #000;
+  cursor: pointer;
+} */
+
 .subscribe-link {
   color: #000;
 }
 
-.subscribe-link:hover {
+.subscribe:hover {
   color: rgba(220, 170, 60, 1);
 }
 
