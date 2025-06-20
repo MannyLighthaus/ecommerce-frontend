@@ -40,7 +40,6 @@ import { BContainer, BButton } from 'bootstrap-vue-next'
             <input
               type="email"
               id="newsletter"
-              name="newsletter"
               placeholder="Enter your email"
               class="newsletter-input"
             />

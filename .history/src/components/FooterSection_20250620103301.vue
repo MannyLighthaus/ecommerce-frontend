@@ -37,13 +37,7 @@ import { BContainer, BButton } from 'bootstrap-vue-next'
         <div>
           <h5 class="link-header">Newsletter</h5>
           <div class="newsletter-input-container">
-            <input
-              type="email"
-              id="newsletter"
-              name="newsletter"
-              placeholder="Enter your email"
-              class="newsletter-input"
-            />
+            <input type="email" id="news" placeholder="Enter your email" class="newsletter-input" />
 
             <p class="subscribe" style="text-decoration: underline">Subscribe</p>
           </div>

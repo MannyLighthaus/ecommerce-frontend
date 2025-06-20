@@ -37,13 +37,7 @@ import { BContainer, BButton } from 'bootstrap-vue-next'
         <div>
           <h5 class="link-header">Newsletter</h5>
           <div class="newsletter-input-container">
-            <input
-              type="email"
-              id="newsletter"
-              name="newsletter"
-              placeholder="Enter your email"
-              class="newsletter-input"
-            />
+            <input type="email" placeholder="Enter your email" class="newsletter-input" />
 
             <p class="subscribe" style="text-decoration: underline">Subscribe</p>
           </div>
@@ -121,10 +115,6 @@ hr {
 
 .link-header {
   color: #9f9f9f;
-}
-
-.subscribe:hover {
-  color: rgba(220, 170, 60, 1);
 }
 @media (min-width: 768px) {
   .footer-section {
