@@ -4,6 +4,7 @@ import ServiceSection from '@/components/ServiceSection.vue'
 import FooterSection from '@/components/FooterSection.vue'
 import { onMounted } from 'vue'
 import { useProductStore } from '@/stores/product'
+import { BContainer } from 'bootstrap-vue-next'
 
 // import the pinia store for product data management
 const store = useProductStore()
@@ -19,17 +20,22 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="shop-header">
-    <img src="@/assets/shop.jpg" alt="" class="img-fluid shop-image" />
-    <h2 class="shop-text">Shop</h2>
+  <BContainer fluid class="p-0">
+    <div class="shop-header">
+      <div class="shop-overlay">
+        <h2 class="shop-text">Shop</h2>
+        <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <router-link to="/">Home</router-link>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Shop</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </BContainer>
 
-    <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
-        <li class="breadcrumb-item active" aria-current="page">Shop</li>
-      </ol>
-    </nav>
-  </div>
   <ProductList />
   <ServiceSection />
   <FooterSection />
@@ -37,41 +43,47 @@ onMounted(() => {
 
 <style scoped>
 .shop-header {
+  background-image: url('@/assets/shop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 177px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
-.shop-image {
-  opacity: 40%;
-  height: 177px;
-  width: 100vw;
-  object-fit: cover;
+.shop-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4); /* Optional overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .shop-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-weight: bold;
-  margin: 0;
   font-size: 26px;
+  margin: 0;
+  color: #000;
 }
 
 .breadcrumb {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-decoration: none;
+  margin-top: 0.5rem;
+  background: transparent;
+  padding: 0;
 }
 
-.breadcrumb-item {
-  a {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 1);
-    font-weight: 500;
-    font-size: 14px;
-  }
+.breadcrumb-item a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .breadcrumb-item.active {
@@ -80,7 +92,6 @@ onMounted(() => {
   color: rgba(0, 0, 0, 1);
 }
 
-/* the divider */
 .breadcrumb-item + .breadcrumb-item::before {
   color: rgba(0, 0, 0, 1);
   font-weight: 500;

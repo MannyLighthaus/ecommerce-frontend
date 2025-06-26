@@ -100,7 +100,7 @@ onMounted(() => {
 
 @media (min-width: 768px) {
   .shop-text {
-    font-size: 48px;
+    /* font-size: 48px; */
   }
   .breadcrumb-item {
     a {
@@ -109,6 +109,10 @@ onMounted(() => {
   }
   .breadcrumb-item.active {
     font-size: 16px;
+  }
+  .breadcrumb {
+    top: 65%;
+    left: 50%;
   }
 }
 </style>

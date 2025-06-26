@@ -47,7 +47,7 @@ onMounted(() => {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 177px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -90,6 +90,7 @@ onMounted(() => {
   font-size: 14px;
   font-weight: 300;
   color: rgba(0, 0, 0, 1);
+  background: transparent;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -109,6 +110,10 @@ onMounted(() => {
   }
   .breadcrumb-item.active {
     font-size: 16px;
+  }
+  .breadcrumb {
+    top: 65%;
+    left: 50%;
   }
 }
 </style>

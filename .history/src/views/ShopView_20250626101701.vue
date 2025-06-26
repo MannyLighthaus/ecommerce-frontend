@@ -110,5 +110,9 @@ onMounted(() => {
   .breadcrumb-item.active {
     font-size: 16px;
   }
+  .breadcrumb {
+    top: 65%;
+    left: 50%;
+  }
 }
 </style>

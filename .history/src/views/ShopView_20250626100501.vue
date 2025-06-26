@@ -47,7 +47,7 @@ onMounted(() => {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 177px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -58,7 +58,7 @@ onMounted(() => {
 .shop-overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.4); /* Optional overlay  for opacity*/
+  background-color: rgba(255, 255, 255, 0.4); /* Optional overlay */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,9 +98,13 @@ onMounted(() => {
   font-size: 16px;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
+  .shop-image {
+    height: 316px;
+  }
   .shop-text {
     font-size: 48px;
+    font-weight: 500;
   }
   .breadcrumb-item {
     a {
@@ -110,5 +114,9 @@ onMounted(() => {
   .breadcrumb-item.active {
     font-size: 16px;
   }
-}
+  .breadcrumb {
+    top: 65%;
+    left: 50%;
+  }
+} */
 </style>
