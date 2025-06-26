@@ -33,7 +33,7 @@ import { BContainer, BRow, BCol, BCard, BCardText, BButton } from 'bootstrap-vue
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 80vh;
   padding: 80px 0;
   display: flex;
   align-items: center;
