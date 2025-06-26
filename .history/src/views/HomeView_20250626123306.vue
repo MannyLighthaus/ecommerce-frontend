@@ -68,7 +68,7 @@ onMounted(() => {
   <FooterSection />
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .home-view__range-header {
   font-size: 24px;
   font-weight: bold;
