@@ -18,8 +18,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 // import localStorage plugin
 import { localStoragePlugin } from './stores/plugins/localStoragePlugin'
 
-// import scss
-import '@/assets/scss/main.scss'
+//import scss
+import '@/assets/scss/'
 
 //create app
 const app = createApp(App)
