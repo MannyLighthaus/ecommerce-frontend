@@ -29,11 +29,11 @@ import { BContainer, BRow, BCol, BCard, BCardText, BButton } from 'bootstrap-vue
 
 <style scoped>
 .hero-section {
-  background-image: url('@/assets/hero-image.png');
+  background-image: url('@/assets/shop3.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 80vh;
   padding: 80px 0;
   display: flex;
   align-items: center;
@@ -45,6 +45,7 @@ import { BContainer, BRow, BCol, BCard, BCardText, BButton } from 'bootstrap-vue
   border: none;
   max-width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(50px);
 }
 
 .arrival-text {

@@ -34,23 +34,28 @@ onMounted(() => {
       <BRow class="text-center g-2">
         <BCol cols="12" md="4">
           <div class="image-wrapper">
-            <img src="@/assets/dining.png" alt="dining" class="img-fluid" />
+            <img
+              src="@/assets/ring.jpg
+            "
+              alt="dining"
+              class="img-fluid"
+            />
           </div>
 
-          <p class="text">Dining</p>
+          <p class="text">Jewelry</p>
         </BCol>
         <BCol cols="12" md="4">
           <div class="image-wrapper">
-            <img src="@/assets/living room.png" alt="living-room" class="img-fluid" />
+            <img src="@/assets/cloth.jpg" alt="living-room" class="img-fluid" />
           </div>
-          <p class="text">Living</p>
+          <p class="text">Women's Clothing</p>
         </BCol>
         <BCol cols="12" md="4">
           <div class="image-wrapper">
-            <img src="@/assets/bedroom.png" alt="bedroom" class="img-fluid" />
+            <img src="@/assets/jeans.jpg" alt="bedroom" class="img-fluid" />
           </div>
 
-          <p class="text">Bedroom</p>
+          <p class="text">Men's Clothing</p>
         </BCol>
       </BRow>
     </BContainer>
@@ -74,6 +79,7 @@ onMounted(() => {
   margin-block-end: 20px;
   font-weight: bold;
 }
+
 /* Add hover effect on images */
 .image-wrapper img.img-fluid {
   transition:
