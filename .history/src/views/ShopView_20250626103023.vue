@@ -100,7 +100,7 @@ onMounted(() => {
 
 /* Breadcrumb divider ("Home > Shop") */
 .breadcrumb-item + .breadcrumb-item::before {
-  color: rgba(0, 0, 0, 1);
+  color: rgb(169, 33, 33);
   font-weight: 500;
   font-size: 16px;
 }

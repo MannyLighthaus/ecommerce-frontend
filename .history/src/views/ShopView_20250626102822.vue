@@ -56,7 +56,6 @@ onMounted(() => {
   position: relative;
 }
 
-/* Optional overlay to slightly fade background and improve text contrast */
 .shop-overlay {
   width: 100%;
   height: 100%;
@@ -68,7 +67,6 @@ onMounted(() => {
   text-align: center;
 }
 
-/* The shop title text */
 .shop-text {
   font-weight: bold;
   font-size: 26px;
@@ -76,14 +74,12 @@ onMounted(() => {
   color: #000;
 }
 
-/* Breadcrumb container */
 .breadcrumb {
   margin-top: 0.5rem;
   background: transparent;
   padding: 0;
 }
 
-/* Breadcrumb link style */
 .breadcrumb-item a {
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
@@ -91,14 +87,12 @@ onMounted(() => {
   font-size: 14px;
 }
 
-/* Active breadcrumb item (current page) */
 .breadcrumb-item.active {
   font-size: 14px;
   font-weight: 300;
   color: rgba(0, 0, 0, 1);
 }
 
-/* Breadcrumb divider ("Home > Shop") */
 .breadcrumb-item + .breadcrumb-item::before {
   color: rgba(0, 0, 0, 1);
   font-weight: 500;
