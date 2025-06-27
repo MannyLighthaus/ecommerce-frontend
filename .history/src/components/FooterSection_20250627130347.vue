@@ -160,6 +160,7 @@ import { BContainer } from 'bootstrap-vue-next'
     outline: none;
     padding: 8px 0;
     font-size: 16px;
+    // width: 100%;
   }
 
   &__subscribe {
