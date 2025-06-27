@@ -71,7 +71,7 @@ import { BContainer } from 'bootstrap-vue-next'
     flex-direction: column;
     gap: 32px;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       flex-direction: row;
       justify-content: space-between;
       padding-inline: 30px 50px;
