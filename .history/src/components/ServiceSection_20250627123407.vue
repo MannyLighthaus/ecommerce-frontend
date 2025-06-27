@@ -13,8 +13,7 @@ const services = [
     <BRow class="service__row">
       <BCol v-for="(service, index) in services" :key="index">
         <div class="service__items">
-          <i :class="['bi', service.icon, 'service__icon']"></i>
-
+          <i :class="`bi ${service.icon}service-icon`"></i>
           <div class="service__texts">
             <p class="service__text-one">{{ service.title }}</p>
             <p class="service__text-two">{{ service.subtitle }}</p>
@@ -35,7 +34,6 @@ const services = [
   &__container {
     background-color: #fff3e3;
     margin-block-start: 40px;
-    margin-block-end: 30px;
   }
 
   &__row {

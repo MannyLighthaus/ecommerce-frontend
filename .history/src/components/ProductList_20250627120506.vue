@@ -41,7 +41,6 @@ function goToProduct(id) {
   router.push({ name: 'product', params: { id } })
 }
 </script>
-
 <template>
   <SimpleToast ref="toastRef" />
 
