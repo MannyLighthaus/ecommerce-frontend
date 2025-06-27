@@ -51,7 +51,117 @@ function decreaseQuantity() {
     quantity.value--
   }
 }
+
+// const useToastController = useToastController()
 </script>
+<!--
+<template>
+  <SimpleToast ref="toastRef" />
+  <div class="product-details-card">
+    <BRow class="mt-4 g-3 px-md-2">
+      <BCol md="6">
+        <div class="image-container">
+          <BCardImg class="card-img" :src="product.image" alt="Product" />
+        </div>
+      </BCol>
+      <BCol md="6">
+        <BCard class="card-container">
+          <BCardTitle>{{ product.title }}</BCardTitle>
+          <BCardText>
+            <p class="fs-3">₦ {{ product.price }}</p>
+            <p class="fs-4">
+              <span style="color: gold">★★★★</span> | {{ product.rating.count }} Reviews
+            </p>
+            <p>{{ product.description }}</p>
+          </BCardText>
+
+          <div class="btns-container">
+            <div class="qty-selector">
+              <button class="qty-btn" @click="decreaseQuantity">-</button>
+              <span class="qty-value">{{ quantity }}</span>
+              <button class="qty-btn" @click="increaseQuantity">+</button>
+            </div>
+            <BButton class="button" @click="addToCart">Add to cart</BButton>
+          </div>
+        </BCard>
+      </BCol>
+    </BRow>
+  </div>
+</template> -->
+
+<!-- <style>
+.product-details-card .card-container {
+  border: none;
+  padding-inline: 20px;
+}
+
+.product-details-card .card-container .card-body {
+  padding: 0;
+  margin-block: 20px;
+}
+
+.product-details-card .button {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(184, 142, 47, 1);
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+.product-details-card .button:hover {
+  background-color: rgba(220, 170, 60, 1);
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Pressed state */
+.product-details-card .button:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.product-details-card .card-img {
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.product-details-card .btns-container {
+  display: flex;
+  gap: 10px;
+}
+.product-details-card .qty-selector {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 5px 10px;
+  width: fit-content;
+}
+.product-details-card .qty-selector .qty-btn {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.product-details-card .qty-selector .qty-value {
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .product-details-card .card-img {
+    max-height: 450px;
+  }
+}
+</style> -->
 
 <template>
   <SimpleToast ref="toastRef" />
@@ -74,7 +184,7 @@ function decreaseQuantity() {
             </p>
             <p class="product-details__description">{{ product.description }}</p>
           </BCardText>
-          <!--  qunatity selector and CTA container-->
+
           <div class="product-details__actions">
             <!-- quantity selector -->
             <div class="product-details__qty">
@@ -82,7 +192,6 @@ function decreaseQuantity() {
               <span class="product-details__qty-value">{{ quantity }}</span>
               <button class="product-details__qty-btn" @click="increaseQuantity">+</button>
             </div>
-            <!-- CTA -->
             <BButton class="product-details__button" @click="addToCart">Add to cart</BButton>
           </div>
         </BCard>
