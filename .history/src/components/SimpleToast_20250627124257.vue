@@ -22,22 +22,22 @@ defineExpose({ showToast })
 </template>
 
 <style scoped lang="scss">
-.toast {
-  &__message {
-    position: fixed;
-    top: 1rem;
-    left: 50%;
-    z-index: 9999; /* ensures it's above everything */
-    transform: translateX(-50%);
-    padding-block: 5px;
-    padding-inline: 10px;
-    background-color: #198754;
-    color: white;
-    border-radius: 5px;
-    font-size: 14px;
-    text-align: center;
+.toast__message {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  z-index: 9999; /* ensures it's above everything */
+  transform: translateX(-50%);
+  padding-block: 5px;
+  padding-inline: 10px;
+  background-color: #198754;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
 
-    @media (min-width: 768px) {
+  @media (min-width: 768px) {
+    .toast__message {
       font-size: 20px;
       top: 2rem;
     }

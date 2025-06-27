@@ -36,8 +36,10 @@ defineExpose({ showToast })
     border-radius: 5px;
     font-size: 14px;
     text-align: center;
+  }
 
-    @media (min-width: 768px) {
+  @media (min-width: 768px) {
+    .toast__message {
       font-size: 20px;
       top: 2rem;
     }

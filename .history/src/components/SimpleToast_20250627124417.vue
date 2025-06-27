@@ -36,11 +36,11 @@ defineExpose({ showToast })
     border-radius: 5px;
     font-size: 14px;
     text-align: center;
+  }
 
-    @media (min-width: 768px) {
-      font-size: 20px;
-      top: 2rem;
-    }
+  @media (min-width: 768px) {
+    font-size: 20px;
+    top: 2rem;
   }
 }
 </style>
