@@ -45,7 +45,7 @@ function goToProduct(id) {
   <SimpleToast ref="toastRef" />
 
   <section>
-    <BContainer class="product__container mt-5">
+    <BContainer class="product__container mt-4">
       <BRow class="mb-5">
         <BCol>
           <h2 class="product__header-text">Our Products</h2>

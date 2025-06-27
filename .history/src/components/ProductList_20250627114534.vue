@@ -46,7 +46,7 @@ function goToProduct(id) {
 
   <section>
     <BContainer class="product__container mt-5">
-      <BRow class="mb-5">
+      <BRow>
         <BCol>
           <h2 class="product__header-text">Our Products</h2>
         </BCol>
@@ -90,9 +90,14 @@ function goToProduct(id) {
 </template>
 <style lang="scss" scoped>
 .product {
+  &__container {
+    // Only on md and up
+  }
+
   &__header-text {
     font-size: 24px;
     font-weight: bold;
+    margin-block-end: 30px;
     text-align: center;
 
     @media (min-width: 768px) {

@@ -46,7 +46,7 @@ function goToProduct(id) {
 
   <section>
     <BContainer class="product__container mt-5">
-      <BRow class="mb-5">
+      <BRow class="mb-4">
         <BCol>
           <h2 class="product__header-text">Our Products</h2>
         </BCol>

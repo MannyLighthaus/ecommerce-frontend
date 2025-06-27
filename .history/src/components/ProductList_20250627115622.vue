@@ -46,7 +46,7 @@ function goToProduct(id) {
 
   <section>
     <BContainer class="product__container mt-5">
-      <BRow class="mb-5">
+      <BRow class="">
         <BCol>
           <h2 class="product__header-text">Our Products</h2>
         </BCol>
@@ -57,7 +57,7 @@ function goToProduct(id) {
       </div>
 
       <BRow v-else-if="products.length">
-        <BCol md="4" v-for="product in products" :key="product.id" class="mb-4">
+        <BCol md="4" v-for="product in products" :key="product.id" class="m-4">
           <BCard class="product__card h-100">
             <!-- Card Content Clickable -->
             <div style="cursor: pointer" @click="goToProduct(product.id)">
