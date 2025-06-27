@@ -15,7 +15,6 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0 auto;
   padding: 0;
-  overflow-x: auto;
 }
 html,
 body {

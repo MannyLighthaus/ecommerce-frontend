@@ -41,7 +41,7 @@ onMounted(() => {
   <FooterSection />
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .shop {
   &__header {
     background-image: url('@/assets/shop.jpg');

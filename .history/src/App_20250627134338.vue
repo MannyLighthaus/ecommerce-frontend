@@ -4,6 +4,7 @@ import NavBar from './components/NavBar.vue'
 
 <template>
   <NavBar />
+
   <RouterView />
 </template>
 
@@ -12,6 +13,12 @@ import NavBar from './components/NavBar.vue'
 
 body {
   font-family: 'Poppins', sans-serif;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0;
+  /* overflow-x: auto; */
+}
+html,
+body {
+  overflow-x: hidden;
 }
 </style>
