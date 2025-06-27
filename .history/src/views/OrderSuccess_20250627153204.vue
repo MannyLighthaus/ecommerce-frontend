@@ -81,7 +81,7 @@ onMounted(async () => {
     min-height: 60vh;
 
     @media (min-width: 768px) {
-      min-height: 10vh;
+      margin-top: 10%;
     }
   }
   &__loading {
@@ -145,12 +145,12 @@ onMounted(async () => {
 //   text-decoration: none;
 // }
 
-// @media (min-width: 768px) {
-//   .success__page {
-//     margin-top: 10%;
-//   }
-//   .success__loading-container {
-//     min-height: 10vh;
-//   }
-// }
+@media (min-width: 768px) {
+  .success__page {
+    margin-top: 10%;
+  }
+  .success__loading-container {
+    min-height: 10vh;
+  }
+}
 </style>

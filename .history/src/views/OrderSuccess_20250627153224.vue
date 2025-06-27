@@ -145,12 +145,12 @@ onMounted(async () => {
 //   text-decoration: none;
 // }
 
-// @media (min-width: 768px) {
-//   .success__page {
-//     margin-top: 10%;
-//   }
-//   .success__loading-container {
-//     min-height: 10vh;
-//   }
-// }
+@media (min-width: 768px) {
+  .success__page {
+    margin-top: 10%;
+  }
+  .success__loading-container {
+    min-height: 10vh;
+  }
+}
 </style>

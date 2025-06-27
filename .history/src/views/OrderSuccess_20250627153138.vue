@@ -79,10 +79,6 @@ onMounted(async () => {
     align-items: center;
     justify-content: center;
     min-height: 60vh;
-
-    @media (min-width: 768px) {
-      min-height: 10vh;
-    }
   }
   &__loading {
     border: 6px solid #f9f1e7;
@@ -145,12 +141,12 @@ onMounted(async () => {
 //   text-decoration: none;
 // }
 
-// @media (min-width: 768px) {
-//   .success__page {
-//     margin-top: 10%;
-//   }
-//   .success__loading-container {
-//     min-height: 10vh;
-//   }
-// }
+@media (min-width: 768px) {
+  .success__page {
+    margin-top: 10%;
+  }
+  .success__loading-container {
+    min-height: 10vh;
+  }
+}
 </style>

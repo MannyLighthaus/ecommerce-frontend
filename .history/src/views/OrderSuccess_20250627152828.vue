@@ -68,10 +68,6 @@ onMounted(async () => {
   &__page {
     text-align: center;
     margin-top: 20%;
-
-    @media (min-width: 768px) {
-      margin-top: 10%;
-    }
   }
   &__loading-container {
     display: flex;
@@ -79,10 +75,6 @@ onMounted(async () => {
     align-items: center;
     justify-content: center;
     min-height: 60vh;
-
-    @media (min-width: 768px) {
-      min-height: 10vh;
-    }
   }
   &__loading {
     border: 6px solid #f9f1e7;
@@ -101,15 +93,6 @@ onMounted(async () => {
     100% {
       transform: rotate(360deg);
     }
-  }
-  &__go-home {
-    margin-top: 20px;
-    display: inline-block;
-    background-color: #b88e2f;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
-    text-decoration: none;
   }
 }
 // .success__page {
@@ -135,22 +118,22 @@ onMounted(async () => {
 //   margin-bottom: 16px;
 // }
 
-// .success__go-home {
-//   margin-top: 20px;
-//   display: inline-block;
-//   background-color: #b88e2f;
-//   color: white;
-//   padding: 10px 20px;
-//   border-radius: 4px;
-//   text-decoration: none;
-// }
+.success__go-home {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: #b88e2f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+}
 
-// @media (min-width: 768px) {
-//   .success__page {
-//     margin-top: 10%;
-//   }
-//   .success__loading-container {
-//     min-height: 10vh;
-//   }
-// }
+@media (min-width: 768px) {
+  .success__page {
+    margin-top: 10%;
+  }
+  .success__loading-container {
+    min-height: 10vh;
+  }
+}
 </style>
